@@ -26,7 +26,7 @@
         <div fxLayout="row wrap" class="marginTop30 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="column wrap" class="marginLeft23" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
-              <mat-icon class="leftPanelIcons">home</mat-icon>
+              <mat-icon class="leftPanelIcons"> <span class="material-symbols-rounded"> house </span></mat-icon>
               <div>
                 <p>Dashboard</p>
               </div>
@@ -37,7 +37,7 @@
           <mat-expansion-panel class="expansionPanelWidth">
             <mat-expansion-panel-header>
               <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
-                <mat-icon class="leftPanelIcons">home</mat-icon>
+                <mat-icon class="leftPanelIcons">beach_access</mat-icon>
                 <div>
                   <p>Leave</p>
                 </div>
@@ -52,7 +52,7 @@
           </mat-expansion-panel>
         </mat-accordion>
       </div>
-      <div fxLayout="column wrap" style="background-color: grey" class="routerOutletScroll" fxFlex="79.5" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="routerOutletBG routerOutletScroll" fxFlex="79.5" fxLayoutAlign="start stretch" [fxShow]="true">
         <router-outlet></router-outlet>
       </div>
     </div>

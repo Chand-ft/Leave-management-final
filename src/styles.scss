@@ -10,6 +10,8 @@
 //                                                          Colours
 
 $primaryBlue: #062c49;
+$routerGrey: #dedede;
+  
 //                                                          Colours
 
 body,
@@ -110,7 +112,7 @@ bh-base_layout, bh-admin_dashboard, bh-admin_department,bh-admin_landing, bh-sta
     width: 100%;
     height: 100%;
 }
-bh-staff_landing{
+bh-staff_landing, bh-staff_dashboard, bh-leave_application, bh-leave_history, bh-leave_details{
     width: 100%;
     height: 100%;
 }
@@ -294,6 +296,9 @@ input:-webkit-autofill:active{
     height: calc(100vh - 70px);
     overflow-y: auto;
 }
+.routerOutletBG{
+    background-color: $routerGrey;
+}
 .padding35{
     padding: 35px;
 }
@@ -330,4 +335,34 @@ input:-webkit-autofill:active{
     background-color: $primaryBlue;
     width: 130px;
     color: white;
+}
+
+
+
+// Tukiso inputs 
+
+
+
+
+
+
+    .inputContainer {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: rgba(0, 0, 0, 0.12);
+        background: white;
+        border-radius: 5px;
+    }
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 0.5em 0 1em 0 !important;
+    }
+    .mat-form-field-infix {
+        border-top: 0.74375em solid transparent;
+    }
+.mat-form-field-appearance-outline .mat-form-field-prefix,
+    .mat-form-field-appearance-outline .mat-form-field-suffix {
+        top: 0.45em;
+    }
+    .mat-form-field-wrapper {
+        padding-bottom: 0;
+    }
 }

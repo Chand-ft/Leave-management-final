@@ -1,11 +1,11 @@
 <div fxLayout="row wrap" class="marginTop50 fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
-  <form [formGroup]="page.staffPortal" class="flexCenter fullWidth">
+  <form [formGroup]="page.leaveApplication" class="flexCenter fullWidth">
     <div fxLayout="column wrap" class="fullWidth" fxFlex="95" fxLayoutAlign="start center" [fxShow]="true">
       <div fxLayout="row wrap" class="padding35 fullWidth adminBoxes" fxLayoutAlign="start center" [fxShow]="true">
         <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="space-between stretch" [fxShow]="true">
           <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
-              <p style="font-size: 20px; font-weight: 500;">Staff Portal</p>
+              <p style="font-size: 20px; font-weight: 500;">Leave Application</p>
             </div>
           </div>
           <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -13,22 +13,22 @@
               <p style="font-weight: 400;">Dashboard &gt; </p>
             </div>
             <div>
-              <p style="font-weight: 400; color: gray;"> Staff Edit</p>
+              <p style="font-weight: 400; color: gray;"> Apply for Leave</p>
             </div>
           </div>
         </div>
       </div>
       <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="space-around stretch" [fxShow]="true">
         <div fxLayout="column wrap" class="departmentWhiteBox" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
-          <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
+          <div fxLayout="row wrap" class="fullWidth marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
             <div>
-              <p style="font-size: 20px; font-weight: 400;">Edit Staff</p>
+              <p style="font-size: 20px; font-weight: 400;">Staff Form</p>
             </div>
           </div>
           <div fxLayout="row wrap" class="marginTop30 fullWidth marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true">
             <div fxLayout="column wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
               <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" class="inputContainer" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">First name :</p>
                   </div>
@@ -37,7 +37,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" class="inputContainer" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Last name :</p>
                   </div>
@@ -46,7 +46,9 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+              </div>
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+                <div fxLayout="column wrap" class="inputContainer" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Email Address :</p>
                   </div>
@@ -55,85 +57,54 @@
 
                   </mat-form-field>
                 </div>
-              </div>
-              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
-                  <div>
-                    <p class="staffPortalText">Password :</p>
-                  </div>
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="password">
-
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
-                  <div>
-                    <p class="staffPortalText">Gender :</p>
-                  </div>
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="gender">
-
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" class="inputContainer" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Phone Number:</p>
                   </div>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Leave Type :</p>
+                  </div>
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="phoneNumber">
+                    <input matInput [required]="false" formControlName="leaveType">
 
                   </mat-form-field>
                 </div>
               </div>
               <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
-                    <p class="staffPortalText">Date Of Birth :</p>
+                    <p class="staffPortalText">Start leave Date :</p>
                   </div>
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="dob">
+                    <input matInput [required]="false" formControlName="startDate">
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
-                    <p class="staffPortalText">Address :</p>
+                    <p class="staffPortalText">End leave Date :</p>
                   </div>
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="address">
-
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
-                  <div>
-                    <p class="staffPortalText">Department :</p>
-                  </div>
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="departmentName">
+                    <input matInput [required]="false" formControlName="endDate">
 
                   </mat-form-field>
                 </div>
               </div>
               <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="70" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
-                    <p class="staffPortalText">Staff Leave Days :</p>
+                    <p class="staffPortalText">Reason for leave :</p>
                   </div>
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="staffLeaveDays">
+                    <input matInput [required]="false" formControlName="reasons">
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="inputContainer" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
-                  <div>
-                    <p class="staffPortalText">User Roles</p>
-                  </div>
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                    <input matInput [required]="false" formControlName="userRole">
-
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="staffPortalSubmitButton">Update Staff</button></div>
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="staffPortalSubmitButton">Apply for leave</button></div>
               </div>
             </div>
           </div>

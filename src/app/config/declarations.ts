@@ -15,6 +15,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-leave_detailsComponent
+import { leave_detailsComponent } from '../components/staff/leave_for_staff/leave_details.component';
+//CORE_REFERENCE_IMPORT-leave_historyComponent
+import { leave_historyComponent } from '../components/staff/leave_for_staff/leave_history.component';
+//CORE_REFERENCE_IMPORT-leave_applicationComponent
+import { leave_applicationComponent } from '../components/staff/leave_for_staff/leave_application.component';
 //CORE_REFERENCE_IMPORT-staff_dashboardComponent
 import { staff_dashboardComponent } from '../components/staff/staff_dashboard.component';
 //CORE_REFERENCE_IMPORT-all_leaveComponent
@@ -63,6 +69,12 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-leave_detailsComponent
+  leave_detailsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-leave_historyComponent
+  leave_historyComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-leave_applicationComponent
+  leave_applicationComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-staff_dashboardComponent
   staff_dashboardComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-all_leaveComponent
@@ -121,7 +133,12 @@ export const appRoutes = [
       {
         path: 'staff',
         component: staff_landingComponent,
-        children: [{ path: 'dashboard', component: staff_dashboardComponent }],
+        children: [
+          { path: 'dashboard', component: staff_dashboardComponent },
+          { path: 'application', component: leave_applicationComponent },
+          { path: 'history', component: leave_historyComponent },
+          { path: 'details', component: leave_detailsComponent },
+        ],
       },
     ],
   },
