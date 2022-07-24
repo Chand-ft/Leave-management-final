@@ -1,0 +1,66 @@
+<div fxLayout="row wrap" class="marginTop50 fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
+  <form [formGroup]="page.newDepartment" class="fullWidth">
+    <div fxLayout="column wrap" class="fullWidth" fxFlex="95" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="row wrap" class="padding35 fullWidth adminBoxes" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="space-between stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p style="font-size: 20px; font-weight: 500;">Department list</p>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p style="font-weight: 400;">Dashboard &gt; </p>
+            </div>
+            <div>
+              <p style="font-weight: 400; color: gray;">Department Module</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="space-around stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="departmentWhiteBox" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
+            <div>
+              <p style="font-size: 20px; font-weight: 400;">New Department</p>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="marginTop30 fullWidth marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true">
+            <div fxLayout="column wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p style="font-size: 15px; font-weight: 400;">Department name</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="depName">
+
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p style="font-size: 15px; font-weight: 400;">Department name</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="depShortName">
+
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-button class="deptartmentSubmitButton">REGISTER</button></div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="departmentWhiteBox" fxFlex="60" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
+            <div>
+              <p style="font-size: 20px; font-weight: 400;">Department List</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

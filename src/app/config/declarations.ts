@@ -15,6 +15,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-staff_portalComponent
+import { staff_portalComponent } from '../components/admin/staff_portal.component';
+//CORE_REFERENCE_IMPORT-admin_departmentComponent
+import { admin_departmentComponent } from '../components/admin/admin_department.component';
+//CORE_REFERENCE_IMPORT-admin_dashboardComponent
+import { admin_dashboardComponent } from '../components/admin/admin_dashboard.component';
 //CORE_REFERENCE_IMPORT-admin_landingComponent
 import { admin_landingComponent } from '../components/admin/admin_landing.component';
 //CORE_REFERENCE_IMPORT-staff_landingComponent
@@ -53,6 +59,12 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-staff_portalComponent
+  staff_portalComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-admin_departmentComponent
+  admin_departmentComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-admin_dashboardComponent
+  admin_dashboardComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-admin_landingComponent
   admin_landingComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-staff_landingComponent
@@ -88,7 +100,15 @@ export const appRoutes = [
     path: 'home',
     component: base_layoutComponent,
     children: [
-      { path: 'admin', component: admin_landingComponent },
+      {
+        path: 'admin',
+        component: admin_landingComponent,
+        children: [
+          { path: 'dashboard', component: admin_dashboardComponent },
+          { path: 'department', component: admin_departmentComponent },
+          { path: 'staff_portal', component: staff_portalComponent },
+        ],
+      },
       { path: 'staff', component: staff_landingComponent },
     ],
   },

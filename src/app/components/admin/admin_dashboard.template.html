@@ -1,0 +1,160 @@
+<div fxLayout="row wrap" class="marginTop50 fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
+  <div fxLayout="column wrap" fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="fullWidth adminBoxes" fxLayoutGap="20px" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Downloaded images/computerMan.png" width="300px"></div>
+      <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="space-between stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p style="font-size: 20px; font-weight: 500;">Welcome back</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p style="font-size: 35px; font-weight: 400; color: purple;">user name</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p style="font-weight: 400; color: gray;">Welcome</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <p style="font-size: 20px; font-weight: 400;">Data Information</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+          <div fxLayout="column wrap" class="dataInformationBoxes" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.dataInfoBoxes">
+            <div fxLayout="row wrap" class="fullHeight fullWidth" fxLayoutAlign="start center" [fxShow]="true">
+              <div fxLayout="column wrap" class="marginLeft20 fullHeight" fxFlex="140px" fxLayoutAlign="center stretch" [fxShow]="true">
+                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p style="font-size: 25px; font-weight: 500; color: #062c49;">{{item.number}}</p>
+                  </div>
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p style="color: grey;">{{item.text}}</p>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="column wrap" class="borderRightRadius fullHeight backgroundColour" fxFlex="55px" fxLayoutAlign="center center" [fxShow]="true">
+                <mat-icon style="color: {{item.colour}}" class="dataInformationIcons">{{item.icon}}</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="space-around stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="staffBoxes" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
+          <div>
+            <p style="font-size: 20px; font-weight: 400;">Admin</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngFor="let item of page.adminStaff">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" class="borderRadius" width="50px"></div>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  <p style="font-weight: 500;    font-size: 18px;">{{item.name}}</p>
+                </div>
+                <div>
+                  <p style="    color: grey;font-size: 13px;">{{item.email}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p style="    color: lightblue;">{{item.role}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column wrap" class="staffBoxes" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
+          <div>
+            <p style="font-size: 20px; font-weight: 400;">Staff</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngFor="let item of page.regularStaff">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" class="borderRadius" width="50px"></div>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  <p style="font-weight: 500;    font-size: 18px;">{{item.name}}</p>
+                </div>
+                <div>
+                  <p style="    color: grey;font-size: 13px;">{{item.email}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p style="    color: lightblue;">{{item.role}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="marginBottom30 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column">
+
+        <div fxLayout="row" fxLayoutAlign="end">
+          <div fxLayout="column" fxFlex="end">
+            <mat-form-field fxFlex="100">
+              <input matInput placeholder="Search">
+            </mat-form-field>
+          </div>
+        </div>
+        <table mat-table matSort class="table-width-fix">
+
+          <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;index&apos;,&apos;index&apos;,&apos;index&apos;,&apos;94e54e26-fb77-2744-fb3a-f44666ad25a0&apos;];"></tr>
+
+          <ng-container matColumnDef="index">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>STAFF NAME</th>
+            <td mat-cell *matCellDef="let table; let i = index;"></td>
+          </ng-container>
+
+          <ng-container matColumnDef="index">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>LEAVE TYPE</th>
+            <td mat-cell *matCellDef="let table; let i = index;"></td>
+          </ng-container>
+
+          <ng-container matColumnDef="index">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>APPLIED DATE</th>
+            <td mat-cell *matCellDef="let table; let i = index;"></td>
+          </ng-container>
+
+          <ng-container matColumnDef="index">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>STATUS</th>
+            <td mat-cell *matCellDef="let table; let i = index;"></td>
+          </ng-container>
+
+          <ng-container matColumnDef="94e54e26-fb77-2744-fb3a-f44666ad25a0">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let table; let i = index;">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <mat-icon>visibility</mat-icon>
+                </div>
+              </div>
+            </td>
+          </ng-container>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+
+      </div>
+    </div>
+  </div>
+</div>

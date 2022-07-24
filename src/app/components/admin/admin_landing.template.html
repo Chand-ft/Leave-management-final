@@ -28,19 +28,19 @@
             <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
               <mat-icon class="leftPanelIcons">home</mat-icon>
               <div>
-                <p>Moon</p>
+                <p>Dashboard</p>
               </div>
             </div>
             <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
               <mat-icon class="leftPanelIcons">home</mat-icon>
               <div>
-                <p>Moon</p>
+                <p>Department</p>
               </div>
             </div>
             <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
               <mat-icon class="leftPanelIcons">home</mat-icon>
               <div>
-                <p>Moon</p>
+                <p>Leave Type</p>
               </div>
             </div>
           </div>
@@ -51,89 +51,34 @@
               <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
                 <mat-icon class="leftPanelIcons">home</mat-icon>
                 <div>
-                  <p>Moon</p>
+                  <p>Staff</p>
                 </div>
               </div>
             </mat-expansion-panel-header>
             <div>
-              fff</div>
+              <p>New Staff</p>
+            </div>
+            <div>
+              <p>Manage Staff</p>
+            </div>
           </mat-expansion-panel>
           <mat-expansion-panel class="expansionPanelWidth">
             <mat-expansion-panel-header>
               <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
                 <mat-icon class="leftPanelIcons">home</mat-icon>
                 <div>
-                  <p>Moon</p>
+                  <p>Leave</p>
                 </div>
               </div>
             </mat-expansion-panel-header>
             <div>
-              fff</div>
+              <p>Manage Staff</p>
+            </div>
           </mat-expansion-panel>
         </mat-accordion>
       </div>
-      <div fxLayout="column wrap" style="background-color: green ;" class="routerOutletScroll" fxFlex="79.5" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" style="background-color: grey" class="routerOutletScroll" fxFlex="79.5" fxLayoutAlign="start stretch" [fxShow]="true">
         <router-outlet></router-outlet>
-        <div fxLayout="row wrap" class="marginTop50 fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
-          <div fxLayout="column wrap" style="background-color:blue; " fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true">
-            <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="space-around stretch" [fxShow]="true">
-              <div fxLayout="column wrap" class="staffBoxes" fxLayoutAlign="start stretch" [fxShow]="true">
-                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
-                  <div>
-                    <p style="font-size: 20px; font-weight: 400;">Admin</p>
-                  </div>
-                </div>
-                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngFor="let item of page.adminStaff">
-                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true">
-                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" class="borderRadius" width="50px"></div>
-                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                        <div>
-                          <p style="font-weight: 500;    font-size: 18px;">{{item.name}}</p>
-                        </div>
-                        <div>
-                          <p style="    color: grey;font-size: 13px;">{{item.email}}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div>
-                      <p style="    color: lightblue;">{{item.role}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div fxLayout="column wrap" class="staffBoxes" fxLayoutAlign="start stretch" [fxShow]="true">
-                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
-                  <div>
-                    <p style="font-size: 20px; font-weight: 400;">Staff</p>
-                  </div>
-                </div>
-                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngFor="let item of page.regularStaff">
-                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true">
-                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" class="borderRadius" width="50px"></div>
-                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                        <div>
-                          <p style="font-weight: 500;    font-size: 18px;">{{item.name}}</p>
-                        </div>
-                        <div>
-                          <p style="    color: grey;font-size: 13px;">{{item.email}}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div>
-                      <p style="    color: lightblue;">{{item.role}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

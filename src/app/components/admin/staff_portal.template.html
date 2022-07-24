@@ -1,0 +1,144 @@
+<div fxLayout="row wrap" class="marginTop50 fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
+  <form [formGroup]="page.staffPortal" class="fullWidth">
+    <div fxLayout="column wrap" class="fullWidth" fxFlex="95" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="row wrap" class="padding35 fullWidth adminBoxes" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="space-between stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p style="font-size: 20px; font-weight: 500;">Department list</p>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p style="font-weight: 400;">Dashboard &gt; </p>
+            </div>
+            <div>
+              <p style="font-weight: 400; color: gray;">Department Module</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="space-around stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="departmentWhiteBox" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
+            <div>
+              <p style="font-size: 20px; font-weight: 400;">New Department</p>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="marginTop30 fullWidth marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true">
+            <div fxLayout="column wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">First name :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="firstName">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Last name :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="lastName">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Email Address :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput type="email" [required]="false" formControlName="email">
+
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Password :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="password">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Gender :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="gender">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Phone Number:</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="phoneNumber">
+
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Date Of Birth :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="dob">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Address :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="address">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Department :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="departmentName">
+
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">Staff Leave Days :</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="staffLeaveDays">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div>
+                    <p class="staffPortalText">User Roles</p>
+                  </div>
+                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                    <input matInput [required]="false" formControlName="userRole">
+
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button class="deptartmentSubmitButton">Update Staff</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

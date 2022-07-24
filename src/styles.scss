@@ -102,7 +102,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 //                                                          Pages
-bh-base_layout{
+bh-base_layout, bh-admin_dashboard, bh-admin_department,bh-admin_landing, bh-staff_portal{
+    width: 100%;
+    height: 100%;
+}
+bh-staff_landing{
     width: 100%;
     height: 100%;
 }
@@ -113,27 +117,27 @@ bh-base_layout{
     color: rgba(216, 214, 222, 1);
 }
 .mat-calendar-body-selected{
-    background-color: #DD601E !important;
+    background-color: $primaryBlue !important;
     color: white;
 }
-// .mat-form-field-wrapper {
-//     padding-bottom: 0em;
-// }
+.mat-form-field-wrapper {
+    padding-bottom: 0em;
+}
 .mat-input-element {
-    caret-color: #DD601E !important;
+    caret-color: $primaryBlue !important;
 }
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-    border-color: #E9651F;
+    border-color: $primaryBlue;
     border-width: 10px;
 }
 .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
-    background-color: #E9651F;
+    background-color: $primaryBlue;
 }
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #E9651F;
+    color: $primaryBlue;
 }
 .mat-datepicker-toggle-active {
-    color: #E9651F;
+    color: $primaryBlue;
 }
 .mat-horizontal-content-container {
     overflow: hidden;
@@ -144,7 +148,7 @@ bh-base_layout{
     border-color: #D8D6DE;
 }
 .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-    background-color: #E9651F;
+    background-color: $primaryBlue;
 }
 .mat-icon-button, .mat-stroked-button {
     color: #BABFC7;
@@ -166,14 +170,14 @@ input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 .mat-calendar-body-today {
-    background-color: #E9651F  !important;
+    background-color: $primaryBlue  !important;
 }
 .mat-calendar-body-selected {
-    background-color: #E9651F  !important;
+    background-color: $primaryBlue  !important;
     color: black !important;
 }
 .mat-calendar-body-cell-content .mat-focus-indicator {
-    background-color: #E9651F !important;
+    background-color: $primaryBlue !important;
 }
 .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
     color: rgba(0,0,0,.54);
@@ -192,7 +196,7 @@ input:-webkit-autofill:active{
     .dialogBoxBody{
         padding: 24px !important;
         .dialogOkayBtn{
-            background: #E9651F;
+            background: $primaryBlue;
             border-radius: 24px;
             color: white;
             margin-top: 10px !important;
@@ -201,7 +205,7 @@ input:-webkit-autofill:active{
     }
 }
 .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
-    background: #E9651F;
+    background: $primaryBlue;
 }
 .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
     color: white;
@@ -285,4 +289,36 @@ input:-webkit-autofill:active{
 .routerOutletScroll{
     height: calc(100vh - 70px);
     overflow-y: auto;
+}
+.padding35{
+    padding: 35px;
+}
+.departmentWhiteBox{
+    border-radius: 20px;
+    background-color: white;
+    // width: 430px;
+    // height: 400px;
+    padding: 20px;   
+}
+.mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 240px;
+}
+.deptartmentSubmitButton{
+    background-color: $primaryBlue;
+    width: 100px;
+    color: white;
+}
+.staffPortalText{
+    font-size: 15px; 
+    font-weight: 400;
+}
+.staffPortalWhiteBox{
+    border-radius: 20px;
+    background-color: white;
+    // width: 430px;
+    // height: 400px;
+    padding: 20px;   
 }
