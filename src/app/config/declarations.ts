@@ -15,6 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-staff_dashboardComponent
+import { staff_dashboardComponent } from '../components/staff/staff_dashboard.component';
 //CORE_REFERENCE_IMPORT-all_leaveComponent
 import { all_leaveComponent } from '../components/admin/leave/all_leave.component';
 //CORE_REFERENCE_IMPORT-staff_portalComponent
@@ -61,6 +63,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-staff_dashboardComponent
+  staff_dashboardComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-all_leaveComponent
   all_leaveComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-staff_portalComponent
@@ -114,7 +118,11 @@ export const appRoutes = [
           { path: 'all-leave', component: all_leaveComponent },
         ],
       },
-      { path: 'staff', component: staff_landingComponent },
+      {
+        path: 'staff',
+        component: staff_landingComponent,
+        children: [{ path: 'dashboard', component: staff_dashboardComponent }],
+      },
     ],
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
