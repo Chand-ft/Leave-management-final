@@ -64,10 +64,48 @@ export class admin_landingComponent {
 
   sd_VaDuQyGiksH1Dl2c(bh) {
     try {
+      this.page.dataInfoBoxes = [];
+      bh = this.sd_1S0ZEdQMsZJlW4Pv(bh);
       //appendnew_next_sd_VaDuQyGiksH1Dl2c
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_VaDuQyGiksH1Dl2c');
+    }
+  }
+
+  sd_1S0ZEdQMsZJlW4Pv(bh) {
+    try {
+      const page = this.page;
+      page.dataInfoBoxes = [
+        {
+          number: 7,
+          text: 'Total Staff',
+          icon: 'person',
+          colour: 'white',
+        },
+        {
+          number: 3,
+          text: 'Approved Leave',
+          icon: 'thumb_up',
+          colour: 'green',
+        },
+        {
+          number: 1,
+          text: 'Pending leave',
+          icon: 'hourglass_empty',
+          colour: 'yellow',
+        },
+        {
+          number: 0,
+          text: 'Rejected leave',
+          icon: 'thumb_down',
+          colour: 'red',
+        },
+      ];
+      //appendnew_next_sd_1S0ZEdQMsZJlW4Pv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1S0ZEdQMsZJlW4Pv');
     }
   }
 

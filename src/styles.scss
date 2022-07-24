@@ -239,7 +239,6 @@ input:-webkit-autofill:active{
     width: 256px;
 }
 .mat-expansion-panel:not([class*=mat-elevation-z]) {
-    // box-shadow: 0px 3px 1px -2pxrgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     box-shadow: none;
 }
 .fakeExpansionPanelHeight{
@@ -258,4 +257,19 @@ input:-webkit-autofill:active{
 .adminBoxes{
     background-color: white; 
     border-radius: 20px;
+}
+.dataInformationBoxes{
+    border-radius: 20px;
+    background-color: white;
+    height: 80px;
+    font-size: 15px;
+    font-weight: 400;
+    .dataInformationIcons{
+        font-size: 40px;
+    }
+    .borderRightRadius{
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    
+    }
 }
