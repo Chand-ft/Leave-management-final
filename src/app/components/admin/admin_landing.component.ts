@@ -65,6 +65,9 @@ export class admin_landingComponent {
   sd_VaDuQyGiksH1Dl2c(bh) {
     try {
       this.page.dataInfoBoxes = [];
+      this.page.employees = undefined;
+      this.page.adminStaff = undefined;
+      this.page.regularStaff = undefined;
       bh = this.sd_1S0ZEdQMsZJlW4Pv(bh);
       //appendnew_next_sd_VaDuQyGiksH1Dl2c
       return bh;
@@ -102,10 +105,145 @@ export class admin_landingComponent {
           colour: 'red',
         },
       ];
+
+      bh = this.employeesAttempt(bh);
       //appendnew_next_sd_1S0ZEdQMsZJlW4Pv
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_1S0ZEdQMsZJlW4Pv');
+    }
+  }
+
+  employeesAttempt(bh) {
+    try {
+      const page = this.page;
+      page.employees = [
+        {
+          heading: 'Admin',
+          staffDetails: [
+            {
+              image: '/Web/Downloaded images/userIcon.png',
+              name: 'Hilton',
+              email: 'hilton@testemail.com',
+              role: 'Line Manager',
+            },
+            {
+              image: '/Web/Downloaded images/userIcon.png',
+              name: 'Mark',
+              email: 'mark@testemail.com',
+              role: 'Operations Manager',
+            },
+            {
+              image: '/Web/Downloaded images/userIcon.png',
+              name: 'Disability',
+              email: 'ramya@testemail.com',
+              role: 'Head of Sales',
+            },
+          ],
+        },
+        {
+          heading: 'Staff',
+          staffDetails: [
+            {
+              image: '/Web/Downloaded images/userIcon.png',
+              name: 'BK',
+              email: 'bk@testemail.com',
+              role: 'Disability',
+            },
+            {
+              image: '/Web/Downloaded images/userIcon.png',
+              name: 'Prince',
+              email: 'prince@testemail.com',
+              role: 'Disability',
+            },
+            {
+              image: '/Web/Downloaded images/userIcon.png',
+              name: 'Neo',
+              email: 'neo@testemail.com',
+              role: 'Disability',
+            },
+            {
+              image: '/Web/Downloaded images/userIcon.png',
+              name: 'Moon',
+              email: 'moon@testemail.com',
+              role: 'Disability',
+            },
+          ],
+        },
+      ];
+      bh = this.admin(bh);
+      //appendnew_next_employeesAttempt
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Y6Cj1FNKTN1UfVDk');
+    }
+  }
+
+  admin(bh) {
+    try {
+      const page = this.page;
+      page.adminStaff = [
+        {
+          image: '/Web/Downloaded images/userIcon.png',
+          name: 'Hilton',
+          email: 'hilton@testemail.com',
+          role: 'Line Manager',
+        },
+        {
+          image: '/Web/Downloaded images/userIcon.png',
+          name: 'Mark',
+          email: 'mark@testemail.com',
+          role: 'Operations Manager',
+        },
+        {
+          image: '/Web/Downloaded images/userIcon.png',
+          name: 'Disability',
+          email: 'ramya@testemail.com',
+          role: 'Head of Sales',
+        },
+      ];
+      bh = this.regStaff(bh);
+      //appendnew_next_admin
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SJhKdpoyLqIYODrl');
+    }
+  }
+
+  regStaff(bh) {
+    try {
+      const page = this.page;
+      page.regularStaff = [
+        {
+          image: '/Web/Downloaded images/userIcon.png',
+          name: 'BK',
+          email: 'bk@testemail.com',
+          role: 'Junior Dev',
+        },
+        {
+          image: '/Web/Downloaded images/userIcon.png',
+          name: 'Prince',
+          email: 'prince@testemail.com',
+          role: 'Junior Dev',
+        },
+        {
+          image: '/Web/Downloaded images/userIcon.png',
+          name: 'Neo',
+          email: 'neo@testemail.com',
+          role: 'Junior Dev',
+        },
+        {
+          image: '/Web/Downloaded images/userIcon.png',
+          name: 'Moon',
+          email: 'moon@testemail.com',
+          role: 'Junior Dev',
+        },
+      ];
+
+      //appendnew_next_regStaff
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kddRfvH63yJ9wHEn');
     }
   }
 

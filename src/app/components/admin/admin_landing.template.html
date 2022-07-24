@@ -21,8 +21,8 @@
         </div>
       </div>
     </div>
-    <div fxLayout="row wrap" class="bodyHeight fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="whiteColour backgroundColour" fxFlex="20.5" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bodyHeight whiteColour backgroundColour" fxFlex="20.5" fxLayoutAlign="start stretch" [fxShow]="true">
         <div fxLayout="row wrap" class="marginTop30 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="column wrap" class="marginLeft23" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
@@ -72,61 +72,66 @@
           </mat-expansion-panel>
         </mat-accordion>
       </div>
-      <div fxLayout="column wrap" style="background-color: green ;" fxFlex="79.5" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" style="background-color: green ;" class="scrollVertical" fxFlex="79.5" fxLayoutAlign="start stretch" [fxShow]="true">
         <router-outlet></router-outlet>
         <div fxLayout="row wrap" class="marginTop50 fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
           <div fxLayout="column wrap" style="background-color:blue; " fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true">
-            <div fxLayout="row wrap" class="fullWidth adminBoxes" fxLayoutGap="20px" fxLayoutAlign="start center" [fxShow]="true">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Downloaded images/computerMan.png" width="300px"></div>
-              <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="space-between stretch" [fxShow]="true">
-                <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="space-around stretch" [fxShow]="true">
+              <div fxLayout="column wrap" class="staffBoxes" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
                   <div>
-                    <p style="font-size: 20px; font-weight: 500;">Welcome back</p>
+                    <p style="font-size: 20px; font-weight: 400;">Admin</p>
                   </div>
                 </div>
-                <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-                  <div>
-                    <p style="font-size: 35px; font-weight: 400; color: purple;">user name</p>
+                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngFor="let item of page.adminStaff">
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                    <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true">
+                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" class="borderRadius" width="50px"></div>
+                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                        <div>
+                          <p style="font-weight: 500;    font-size: 18px;">{{item.name}}</p>
+                        </div>
+                        <div>
+                          <p style="    color: grey;font-size: 13px;">{{item.email}}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-                  <div>
-                    <p style="font-weight: 400; color: gray;">Welcome</p>
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                    <div>
+                      <p style="    color: lightblue;">{{item.role}}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div fxLayout="row wrap" class="marginTop20 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-              <div fxLayout="column wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" class="staffBoxes" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
                   <div>
-                    <p style="font-size: 20px; font-weight: 400;">Data Information</p>
+                    <p style="font-size: 20px; font-weight: 400;">Staff</p>
                   </div>
                 </div>
-                <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
-                  <div fxLayout="column wrap" class="dataInformationBoxes" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.dataInfoBoxes">
-                    <div fxLayout="row wrap" class="fullHeight fullWidth" fxLayoutAlign="start center" [fxShow]="true">
-                      <div fxLayout="column wrap" class="marginLeft20 fullHeight" fxFlex="140px" fxLayoutAlign="center stretch" [fxShow]="true">
-                        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                          <div>
-                            <p style="font-size: 25px; font-weight: 500; color: #062c49;">{{item.number}}</p>
-                          </div>
+                <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngFor="let item of page.regularStaff">
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                    <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true">
+                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" class="borderRadius" width="50px"></div>
+                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                        <div>
+                          <p style="font-weight: 500;    font-size: 18px;">{{item.name}}</p>
                         </div>
-                        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                          <div>
-                            <p style="color: grey;">{{item.text}}</p>
-                          </div>
+                        <div>
+                          <p style="    color: grey;font-size: 13px;">{{item.email}}</p>
                         </div>
                       </div>
-                      <div fxLayout="column wrap" class="borderRightRadius fullHeight backgroundColour" fxFlex="55px" fxLayoutAlign="center center" [fxShow]="true">
-                        <mat-icon style="color: {{item.colour}}" class="dataInformationIcons">{{item.icon}}</mat-icon>
-                      </div>
+                    </div>
+                  </div>
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                    <div>
+                      <p style="    color: lightblue;">{{item.role}}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>
           </div>
         </div>
       </div>

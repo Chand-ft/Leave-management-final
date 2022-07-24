@@ -219,6 +219,9 @@ input:-webkit-autofill:active{
 .bodyHeight{
     height: calc(100vh - 70px); 
 }
+.leftPanelHeight{
+    height: 619px;
+}
 .backgroundColour{
     background-color: $primaryBlue ;
 }
@@ -272,4 +275,11 @@ input:-webkit-autofill:active{
         border-bottom-right-radius: 20px;
     
     }
+}
+.staffBoxes{
+    border-radius: 20px;
+    background-color: white;
+    width: 430px;
+    height: 400px;
+    padding: 20px;
 }
