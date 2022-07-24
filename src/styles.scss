@@ -154,11 +154,10 @@ bh-base_layout{
     border-color: #D8D6DE;
 }
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 15px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E9651F;
-  border-radius: 10px;
+  background: grey;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -282,4 +281,8 @@ input:-webkit-autofill:active{
     width: 430px;
     height: 400px;
     padding: 20px;
+}
+.routerOutletScroll{
+    height: calc(100vh - 70px);
+    overflow-y: auto;
 }
