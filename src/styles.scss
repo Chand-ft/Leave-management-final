@@ -97,12 +97,16 @@ p, h1, h2, h3, h4, h5, h6 {
 .fullvh{
     height:100vh;
 }
+.flexCenter{
+    display: flex;
+    justify-content: center;
+}
 //                                                          Standard styles
 
 
 
 //                                                          Pages
-bh-base_layout, bh-admin_dashboard, bh-admin_department,bh-admin_landing, bh-staff_portal{
+bh-base_layout, bh-admin_dashboard, bh-admin_department,bh-admin_landing, bh-staff_portal, bh-all_leave{
     width: 100%;
     height: 100%;
 }
@@ -321,4 +325,9 @@ input:-webkit-autofill:active{
     // width: 430px;
     // height: 400px;
     padding: 20px;   
+}
+.staffPortalSubmitButton{
+    background-color: $primaryBlue;
+    width: 130px;
+    color: white;
 }

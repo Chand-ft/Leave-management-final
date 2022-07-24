@@ -15,8 +15,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-all_leaveComponent
+import { all_leaveComponent } from '../components/admin/leave/all_leave.component';
 //CORE_REFERENCE_IMPORT-staff_portalComponent
-import { staff_portalComponent } from '../components/admin/staff_portal.component';
+import { staff_portalComponent } from '../components/admin/staff/staff_portal.component';
 //CORE_REFERENCE_IMPORT-admin_departmentComponent
 import { admin_departmentComponent } from '../components/admin/admin_department.component';
 //CORE_REFERENCE_IMPORT-admin_dashboardComponent
@@ -59,6 +61,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-all_leaveComponent
+  all_leaveComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-staff_portalComponent
   staff_portalComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-admin_departmentComponent
@@ -106,7 +110,8 @@ export const appRoutes = [
         children: [
           { path: 'dashboard', component: admin_dashboardComponent },
           { path: 'department', component: admin_departmentComponent },
-          { path: 'staff_portal', component: staff_portalComponent },
+          { path: 'staff-portal', component: staff_portalComponent },
+          { path: 'all-leave', component: all_leaveComponent },
         ],
       },
       { path: 'staff', component: staff_landingComponent },

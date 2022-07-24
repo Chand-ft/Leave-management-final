@@ -1,11 +1,11 @@
 <div fxLayout="row wrap" class="marginTop50 fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
-  <form [formGroup]="page.staffPortal" class="fullWidth">
+  <form [formGroup]="page.staffPortal" class="flexCenter fullWidth">
     <div fxLayout="column wrap" class="fullWidth" fxFlex="95" fxLayoutAlign="start center" [fxShow]="true">
       <div fxLayout="row wrap" class="padding35 fullWidth adminBoxes" fxLayoutAlign="start center" [fxShow]="true">
         <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="space-between stretch" [fxShow]="true">
           <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
-              <p style="font-size: 20px; font-weight: 500;">Department list</p>
+              <p style="font-size: 20px; font-weight: 500;">Staff Portal</p>
             </div>
           </div>
           <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -13,7 +13,7 @@
               <p style="font-weight: 400;">Dashboard &gt; </p>
             </div>
             <div>
-              <p style="font-weight: 400; color: gray;">Department Module</p>
+              <p style="font-weight: 400; color: gray;"> Staff Edit</p>
             </div>
           </div>
         </div>
@@ -22,13 +22,13 @@
         <div fxLayout="column wrap" class="departmentWhiteBox" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" class="marginBottom10" fxLayoutAlign="start center" [fxShow]="true">
             <div>
-              <p style="font-size: 20px; font-weight: 400;">New Department</p>
+              <p style="font-size: 20px; font-weight: 400;">Edit Staff</p>
             </div>
           </div>
           <div fxLayout="row wrap" class="marginTop30 fullWidth marginBottom10" fxLayoutAlign="space-between stretch" [fxShow]="true">
             <div fxLayout="column wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">First name :</p>
                   </div>
@@ -37,7 +37,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Last name :</p>
                   </div>
@@ -46,7 +46,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Email Address :</p>
                   </div>
@@ -56,8 +56,8 @@
                   </mat-form-field>
                 </div>
               </div>
-              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Password :</p>
                   </div>
@@ -66,7 +66,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Gender :</p>
                   </div>
@@ -75,7 +75,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Phone Number:</p>
                   </div>
@@ -85,8 +85,8 @@
                   </mat-form-field>
                 </div>
               </div>
-              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Date Of Birth :</p>
                   </div>
@@ -95,7 +95,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Address :</p>
                   </div>
@@ -104,7 +104,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Department :</p>
                   </div>
@@ -114,8 +114,8 @@
                   </mat-form-field>
                 </div>
               </div>
-              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">Staff Leave Days :</p>
                   </div>
@@ -124,7 +124,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div>
                     <p class="staffPortalText">User Roles</p>
                   </div>
@@ -133,7 +133,7 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button class="deptartmentSubmitButton">Update Staff</button></div>
+                <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="staffPortalSubmitButton">Update Staff</button></div>
               </div>
             </div>
           </div>
