@@ -14,8 +14,24 @@
                   </div>
                 </div>
               </mat-expansion-panel-header>
-              <div>
-                fff</div>
+              <div fxLayout="row wrap" class="pointerCursor" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/staff/profile">
+                <mat-icon>home</mat-icon>
+                <div>
+                  <p>Profile</p>
+                </div>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-icon>home</mat-icon>
+                <div>
+                  <p>Reset Password</p>
+                </div>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-icon>home</mat-icon>
+                <div>
+                  <p>Log out</p>
+                </div>
+              </div>
             </mat-expansion-panel>
           </mat-accordion>
         </div>
@@ -23,7 +39,7 @@
     </div>
     <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="column wrap" class="bodyHeight whiteColour backgroundColour" fxFlex="20.5" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="row wrap" class="marginTop30 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="pointerCursor marginTop30 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/staff/dashboard">
           <div fxLayout="column wrap" class="marginLeft23" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
               <mat-icon class="leftPanelIcons"> <span class="material-symbols-rounded"> house </span></mat-icon>
@@ -43,11 +59,17 @@
                 </div>
               </div>
             </mat-expansion-panel-header>
-            <div>
-              <p>Apply for leave</p>
+            <div fxLayout="row wrap" class="pointerCursor" fxLayoutAlign="start center" [fxShow]="true" routerLink="/home/staff/application">
+              <mat-icon>home</mat-icon>
+              <div>
+                <p>Apply for leave</p>
+              </div>
             </div>
-            <div>
-              <p>Leave history</p>
+            <div fxLayout="row wrap" class="pointerCursor" fxLayoutAlign="start center" [fxShow]="true" routerLink="/home/staff/history">
+              <mat-icon>home</mat-icon>
+              <div>
+                <p>Leave history</p>
+              </div>
             </div>
           </mat-expansion-panel>
         </mat-accordion>

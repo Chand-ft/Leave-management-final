@@ -14,8 +14,24 @@
                   </div>
                 </div>
               </mat-expansion-panel-header>
-              <div>
-                fff</div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-icon>home</mat-icon>
+                <div>
+                  <p>Profile</p>
+                </div>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-icon>home</mat-icon>
+                <div>
+                  <p>Reset Password</p>
+                </div>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-icon>home</mat-icon>
+                <div>
+                  <p>Log out</p>
+                </div>
+              </div>
             </mat-expansion-panel>
           </mat-accordion>
         </div>
@@ -25,19 +41,19 @@
       <div fxLayout="column wrap" class="bodyHeight whiteColour backgroundColour" fxFlex="20.5" fxLayoutAlign="start stretch" [fxShow]="true">
         <div fxLayout="row wrap" class="marginTop30 fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="column wrap" class="marginLeft23" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
-            <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
+            <div fxLayout="row wrap" class="pointerCursor fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true" routerLink="/home/admin/dashboard">
               <mat-icon class="leftPanelIcons"><span class="material-symbols-rounded"> house </span></mat-icon>
               <div>
                 <p>Dashboard</p>
               </div>
             </div>
-            <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
+            <div fxLayout="row wrap" class="pointerCursor fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true" routerLink="/home/admin/department">
               <mat-icon class="leftPanelIcons">apps</mat-icon>
               <div>
                 <p>Department</p>
               </div>
             </div>
-            <div fxLayout="row wrap" class="fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
+            <div fxLayout="row wrap" class="pointerCursor fakeExpansionPanelHeight" fxLayoutGap="15px" fxLayoutAlign="start center" [fxShow]="true">
               <mat-icon class="leftPanelIcons">today</mat-icon>
               <div>
                 <p>Leave Type</p>
@@ -55,11 +71,15 @@
                 </div>
               </div>
             </mat-expansion-panel-header>
-            <div>
-              <p>New Staff</p>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div>
+                <p>New Staff</p>
+              </div>
             </div>
-            <div>
-              <p>Manage Staff</p>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div>
+                <p>Manage Staff</p>
+              </div>
             </div>
           </mat-expansion-panel>
           <mat-expansion-panel class="expansionPanelWidth">
@@ -71,8 +91,15 @@
                 </div>
               </div>
             </mat-expansion-panel-header>
-            <div>
-              <p>Manage Staff</p>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/admin/application">
+              <div>
+                <p>Apply</p>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/admin/all-leave">
+              <div>
+                <p>All Leave</p>
+              </div>
             </div>
           </mat-expansion-panel>
         </mat-accordion>

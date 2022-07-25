@@ -1,0 +1,41 @@
+<div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="backgroundColour navBarHeight fullWidth" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true"><img imgSrc="/Web/Downloaded images/logo.png" width="200px"></div>
+    </div>
+    <div fxLayout="row wrap" class="loginBGColour fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bodyHeight" fxFlex="70" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/Downloaded images/office.png" width="80%"></div>
+      <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center start" [fxShow]="true">
+        <form [formGroup]="page.leaveApplication" class="loginWhiteBox flexCenter fullWidth">
+          <div fxLayout="column wrap" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+              <div fxLayout="column wrap" class="inputContainer" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  <p class="staffPortalText">Email Address :</p>
+                </div>
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput type="email" [required]="false" formControlName="email">
+
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="space-between stretch" [fxShow]="true">
+              <div fxLayout="column wrap" class="inputContainer" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  <p class="staffPortalText">Password :</p>
+                </div>
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput type="password" [required]="false" formControlName="password">
+
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="center stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="staffPortalSubmitButton">Sign In</button></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

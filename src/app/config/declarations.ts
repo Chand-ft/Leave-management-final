@@ -15,6 +15,16 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-loading_pageComponent
+import { loading_pageComponent } from '../components/aa_base/loading_page.component';
+//CORE_REFERENCE_IMPORT-admin_leave_applicationComponent
+import { admin_leave_applicationComponent } from '../components/admin/leave/admin_leave_application.component';
+//CORE_REFERENCE_IMPORT-profileComponent
+import { profileComponent } from '../components/staff/profile.component';
+//CORE_REFERENCE_IMPORT-manage_staffComponent
+import { manage_staffComponent } from '../components/admin/staff/manage_staff.component';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { loginComponent } from '../components/aa_base/login.component';
 //CORE_REFERENCE_IMPORT-leave_detailsComponent
 import { leave_detailsComponent } from '../components/staff/leave_for_staff/leave_details.component';
 //CORE_REFERENCE_IMPORT-leave_historyComponent
@@ -69,6 +79,16 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loading_pageComponent
+  loading_pageComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-admin_leave_applicationComponent
+  admin_leave_applicationComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-profileComponent
+  profileComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-manage_staffComponent
+  manage_staffComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loginComponent
+  loginComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-leave_detailsComponent
   leave_detailsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-leave_historyComponent
@@ -128,6 +148,9 @@ export const appRoutes = [
           { path: 'department', component: admin_departmentComponent },
           { path: 'staff-portal', component: staff_portalComponent },
           { path: 'all-leave', component: all_leaveComponent },
+          { path: 'manage', component: manage_staffComponent },
+          { path: 'application', component: admin_leave_applicationComponent },
+          { path: 'details', component: leave_detailsComponent },
         ],
       },
       {
@@ -137,12 +160,13 @@ export const appRoutes = [
           { path: 'dashboard', component: staff_dashboardComponent },
           { path: 'application', component: leave_applicationComponent },
           { path: 'history', component: leave_historyComponent },
-          { path: 'details', component: leave_detailsComponent },
+          { path: 'profile', component: profileComponent },
         ],
       },
+      { path: 'login', component: loginComponent },
     ],
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

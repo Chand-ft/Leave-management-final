@@ -108,11 +108,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 //                                                          Pages
-bh-base_layout, bh-admin_dashboard, bh-admin_department,bh-admin_landing, bh-staff_portal, bh-all_leave{
-    width: 100%;
-    height: 100%;
-}
-bh-staff_landing, bh-staff_dashboard, bh-leave_application, bh-leave_history, bh-leave_details{
+bh-base_layout, bh-admin_dashboard, bh-admin_department,bh-admin_landing, bh-staff_portal, bh-all_leave, bh-login, bh-manage_staff,bh-staff_landing, bh-staff_dashboard, bh-leave_application, bh-leave_history, bh-leave_details, bh-profile, bh-admin_leave_application, bh-loading_page{
     width: 100%;
     height: 100%;
 }
@@ -336,16 +332,10 @@ input:-webkit-autofill:active{
     width: 130px;
     color: white;
 }
-
-
-
-// Tukiso inputs 
-
-
-
-
-
-
+.verticalLine {
+  border-left: 2px solid grey;
+  height: 50px;
+}
     .inputContainer {
     .mat-form-field-appearance-outline .mat-form-field-outline {
         color: rgba(0, 0, 0, 0.12);
@@ -365,4 +355,24 @@ input:-webkit-autofill:active{
     .mat-form-field-wrapper {
         padding-bottom: 0;
     }
+}
+.leaveDetails{
+    border: 1px solid;
+    padding: 10px;
+    background: #e0e8f5;
+    height: fit-content;
+    // width: 260px;
+    border-radius: 10px;
+}
+.loginBGColour{
+    background-color: #b7d7f2;
+}
+.loginWhiteBox{
+    border-radius: 20px;
+    background-color: white;
+    padding: 25px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height: fit-content;
+    width: 80%;
 }
