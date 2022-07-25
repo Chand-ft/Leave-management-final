@@ -15,6 +15,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-new_staffComponent
+import { new_staffComponent } from '../components/admin/staff/new_staff.component';
+//CORE_REFERENCE_IMPORT-dialog_box_detailsComponent
+import { dialog_box_detailsComponent } from '../components/aa_base/dialog_box_details.component';
 //CORE_REFERENCE_IMPORT-loading_pageComponent
 import { loading_pageComponent } from '../components/aa_base/loading_page.component';
 //CORE_REFERENCE_IMPORT-admin_leave_applicationComponent
@@ -79,6 +83,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-new_staffComponent
+  new_staffComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialog_box_detailsComponent
+  dialog_box_detailsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loading_pageComponent
   loading_pageComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-admin_leave_applicationComponent
@@ -151,6 +159,7 @@ export const appRoutes = [
           { path: 'manage', component: manage_staffComponent },
           { path: 'application', component: admin_leave_applicationComponent },
           { path: 'details', component: leave_detailsComponent },
+          { path: 'new', component: new_staffComponent },
         ],
       },
       {

@@ -1,0 +1,27 @@
+<div fxLayout="column wrap" class="padding35" fxLayoutAlign="start stretch" [fxShow]="true">
+  <form [formGroup]="page.approveOrReject" class="fullWidth">
+    <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div>
+        <p>Take leave action</p>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <mat-select formControlName="option" placeholder="Select" [required]="false">
+          <ng-template ngFor let-option [ngForOf]="page.approveOrRejectOptions" let-i="index">
+            <mat-option [value]="option.option">{{option.option}}</mat-option>
+          </ng-template>
+        </mat-select>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <mat-form-field [appearance]="&apos;outline&apos;">
+        <textarea matInput placeholder="Notes" [required]="false"></textarea>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="staffPortalSubmitButton">Submit</button></div>
+    </div>
+  </form>
+</div>

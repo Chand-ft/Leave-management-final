@@ -12,18 +12,24 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { MatDialog } from '@angular/material/dialog'; //_splitter_
-import { dialog_box_detailsComponent } from '../../aa_base/dialog_box_details.component'; //_splitter_
+import {
+  FormControl,
+  ReactiveFormsModule,
+  FormGroup,
+  Validators,
+  ValidationErrors,
+  FormBuilder,
+} from '@angular/forms'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-leave_details',
-  templateUrl: './leave_details.template.html',
+  selector: 'bh-new_staff',
+  templateUrl: './new_staff.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class leave_detailsComponent {
+export class new_staffComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -32,6 +38,7 @@ export class leave_detailsComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -40,7 +47,7 @@ export class leave_detailsComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_th9hT1g1AkAyQ8EO(bh);
+      this.sd_M9O72w0OC1ooeNbX(bh);
     }
   }
 
@@ -52,52 +59,57 @@ export class leave_detailsComponent {
     //append_listeners
   }
 
-  sd_th9hT1g1AkAyQ8EO(bh) {
+  sd_M9O72w0OC1ooeNbX(bh) {
     try {
-      bh = this.sd_TMNYHUroK496qQ7S(bh);
-      //appendnew_next_sd_th9hT1g1AkAyQ8EO
+      bh = this.sd_iWr4E6EB5MkXPjnT(bh);
+      //appendnew_next_sd_M9O72w0OC1ooeNbX
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_th9hT1g1AkAyQ8EO');
+      return this.errorHandler(bh, e, 'sd_M9O72w0OC1ooeNbX');
     }
   }
 
-  openDialog(...others) {
+  //appendnew_flow_new_staffComponent_start
+
+  sd_iWr4E6EB5MkXPjnT(bh) {
     try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_kLjXsyUDSIXYeAN2(bh);
-      //appendnew_next_openDialog
+      this.page.addStaff = undefined;
+      bh = this.sd_gduIFD4519oYrDrz(bh);
+      //appendnew_next_sd_iWr4E6EB5MkXPjnT
+      return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OxorjoDqoqIfxR4m');
+      return this.errorHandler(bh, e, 'sd_iWr4E6EB5MkXPjnT');
     }
   }
 
-  //appendnew_flow_leave_detailsComponent_start
-
-  sd_TMNYHUroK496qQ7S(bh) {
+  sd_gduIFD4519oYrDrz(bh) {
     try {
-      //appendnew_next_sd_TMNYHUroK496qQ7S
+      this.page.FG = FormGroup;
+      bh = this.sd_bsJFpsynbRJMhxBF(bh);
+      //appendnew_next_sd_gduIFD4519oYrDrz
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_TMNYHUroK496qQ7S');
+      return this.errorHandler(bh, e, 'sd_gduIFD4519oYrDrz');
     }
   }
 
-  sd_kLjXsyUDSIXYeAN2(bh) {
+  sd_bsJFpsynbRJMhxBF(bh) {
     try {
-      const dialog_box_detailsDialog = this.__page_injector__.get(MatDialog);
-      const dialog_box_detailsDialogRef = dialog_box_detailsDialog.open(
-        dialog_box_detailsComponent,
-        { data: bh.input.data, minWidth: '500px' }
-      );
+      const page = this.page;
+      page.addStaff = new FormGroup({
+        firstName: new FormControl('', [Validators.required]),
+        lastName: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required]),
+        phoneNumber: new FormControl('', [Validators.required]),
+        role: new FormControl('', [Validators.required]),
+        physicalAddress: new FormControl('', [Validators.required]),
+      });
+      console.log('form', page.addStaff);
 
+      //appendnew_next_sd_bsJFpsynbRJMhxBF
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_kLjXsyUDSIXYeAN2');
+      return this.errorHandler(bh, e, 'sd_bsJFpsynbRJMhxBF');
     }
   }
 
@@ -123,5 +135,5 @@ export class leave_detailsComponent {
       throw e;
     }
   }
-  //appendnew_flow_leave_detailsComponent_Catch
+  //appendnew_flow_new_staffComponent_Catch
 }

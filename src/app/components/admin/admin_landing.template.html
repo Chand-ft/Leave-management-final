@@ -26,7 +26,7 @@
                   <p>Reset Password</p>
                 </div>
               </div>
-              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/login">
                 <mat-icon>home</mat-icon>
                 <div>
                   <p>Log out</p>
@@ -71,12 +71,12 @@
                 </div>
               </div>
             </mat-expansion-panel-header>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" class="pointerCursor" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/admin/new">
               <div>
                 <p>New Staff</p>
               </div>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" class="pointerCursor" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/admin/manage">
               <div>
                 <p>Manage Staff</p>
               </div>
