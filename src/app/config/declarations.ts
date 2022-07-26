@@ -15,6 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-admin_profileComponent
+import { admin_profileComponent } from '../components/admin/admin_profile.component';
 //CORE_REFERENCE_IMPORT-new_staffComponent
 import { new_staffComponent } from '../components/admin/staff/new_staff.component';
 //CORE_REFERENCE_IMPORT-dialog_box_detailsComponent
@@ -83,6 +85,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-admin_profileComponent
+  admin_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-new_staffComponent
   new_staffComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialog_box_detailsComponent
@@ -160,6 +164,7 @@ export const appRoutes = [
           { path: 'application', component: admin_leave_applicationComponent },
           { path: 'details', component: leave_detailsComponent },
           { path: 'new', component: new_staffComponent },
+          { path: 'profile', component: admin_profileComponent },
         ],
       },
       {
