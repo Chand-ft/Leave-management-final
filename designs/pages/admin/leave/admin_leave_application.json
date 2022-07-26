@@ -1,0 +1,155 @@
+[
+    {
+        "id": "sd_1uk1r26OWdqK9aUm",
+        "type": "tab",
+        "createdDate": "2022-07-25T13:46:29.741Z",
+        "label": "admin_leave_application",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "admin_leave_applicationComponent"
+    },
+    {
+        "id": "sd_d171dWQ2trfJQmYW",
+        "type": "OnInit",
+        "z": "sd_1uk1r26OWdqK9aUm",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_d171dWQ2trfJQmYW",
+        "category": "Lifecycle Events",
+        "x": 225,
+        "y": 160,
+        "wires": [
+            [
+                "sd_h2UcNOWDuufZSIMp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "admin_leave_applicationComponent"
+    },
+    {
+        "id": "sd_h2UcNOWDuufZSIMp",
+        "type": "PageVariables",
+        "z": "sd_1uk1r26OWdqK9aUm",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "leaveApplication",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_h2UcNOWDuufZSIMp",
+        "category": "Function",
+        "x": 325,
+        "y": 160,
+        "wires": [
+            [
+                "sd_F8gxvanXzorFzozQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_WEzogK28bdZKknZ2",
+        "type": "Script",
+        "z": "sd_1uk1r26OWdqK9aUm",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.leaveApplication = new FormGroup({\n    firstName: new FormControl('', [Validators.required]),\n    lastName: new FormControl('', [Validators.required]),\n    email: new FormControl('', [Validators.required]),\n    leaveType: new FormControl('', [Validators.required]),\n    startDate: new FormControl('', [Validators.required]),\n    endDate: new FormControl('', [Validators.required]),\n    reasons: new FormControl('', [Validators.required])\n  });\nconsole.log(\"form\", page.leaveApplication);\n",
+        "functionName": "sd_WEzogK28bdZKknZ2",
+        "category": "Function",
+        "x": 525,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_F8gxvanXzorFzozQ",
+        "type": "UseDependency",
+        "z": "sd_1uk1r26OWdqK9aUm",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "FG"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ValidationErrors",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_F8gxvanXzorFzozQ",
+        "category": "Function",
+        "x": 420.88888931274414,
+        "y": 160,
+        "wires": [
+            [
+                "sd_WEzogK28bdZKknZ2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

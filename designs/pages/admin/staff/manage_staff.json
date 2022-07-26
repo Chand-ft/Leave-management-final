@@ -1,0 +1,168 @@
+[
+    {
+        "id": "sd_5gIzrHfaDEzvw4ja",
+        "type": "tab",
+        "createdDate": "2022-07-25T12:44:46.127Z",
+        "label": "manage_staff",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "manage_staffComponent"
+    },
+    {
+        "id": "sd_3GgexRMsvmZdX0Er",
+        "type": "OnInit",
+        "z": "sd_5gIzrHfaDEzvw4ja",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_3GgexRMsvmZdX0Er",
+        "category": "Lifecycle Events",
+        "x": 185,
+        "y": 140,
+        "wires": [
+            [
+                "sd_HQCp9UBB9a6hmbJ7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "manage_staffComponent"
+    },
+    {
+        "id": "sd_HQCp9UBB9a6hmbJ7",
+        "type": "PageVariables",
+        "z": "sd_5gIzrHfaDEzvw4ja",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "dataInfoBoxes",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "employees",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "adminStaff",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "regularStaff",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_HQCp9UBB9a6hmbJ7",
+        "category": "Function",
+        "x": 285,
+        "y": 140,
+        "wires": [
+            [
+                "sd_nnl6gN4gjBWRN6Ty"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nnl6gN4gjBWRN6Ty",
+        "type": "Script",
+        "z": "sd_5gIzrHfaDEzvw4ja",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.dataInfoBoxes = [{\n\t\"number\": 7,\n\t\"text\": \"Total Staff\",\n\t\"icon\": \"person\",\n\t\"colour\": \"white\"\n\n},\n{\n\t\"number\": 3,\n\t\"text\": \"Approved Leave\",\n\t\"icon\": \"thumb_up\",\n\t\"colour\": \"green\"\n},\n{\n\t\"number\": 1,\n\t\"text\": \"Pending leave\",\n\t\"icon\": \"hourglass_empty\",\n\t\"colour\": \"yellow\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Rejected leave\",\n\t\"icon\": \"thumb_down\",\n\t\"colour\": \"red\"\n\n}]\n\n",
+        "functionName": "sd_nnl6gN4gjBWRN6Ty",
+        "category": "Function",
+        "x": 375,
+        "y": 140,
+        "wires": [
+            [
+                "sd_wXPxd2MzYh9uDzft"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_wXPxd2MzYh9uDzft",
+        "type": "Script",
+        "z": "sd_5gIzrHfaDEzvw4ja",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "employees attempt",
+        "script": "page.employees = [\n    {\t\"heading\": \"Admin\",\n\t\t\"staffDetails\":[\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Hilton\",\"email\":\"hilton@testemail.com\",\"role\": \"Line Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Mark\",\"email\":\"mark@testemail.com\",\"role\": \"Operations Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Disability\",\"email\":\"ramya@testemail.com\",\"role\": \"Head of Sales\"}\n\t]\n   },\n   {\"heading\": \"Staff\",\n\t\"staffDetails\":[\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"BK\",\"email\":\"bk@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Prince\",\"email\":\"prince@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Neo\",\"email\":\"neo@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Moon\",\"email\":\"moon@testemail.com\",\"role\": \"Disability\"},\n\n\t]\n   }\n]",
+        "functionName": "employeesAttempt",
+        "category": "Function",
+        "x": 475,
+        "y": 140,
+        "wires": [
+            [
+                "sd_vA9JE9L7idwi9l8c"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_vA9JE9L7idwi9l8c",
+        "type": "Script",
+        "z": "sd_5gIzrHfaDEzvw4ja",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "admin",
+        "script": "page.adminStaff = [\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Hilton\",\"email\":\"hilton@testemail.com\",\"role\": \"Line Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Mark\",\"email\":\"mark@testemail.com\",\"role\": \"Operations Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Disability\",\"email\":\"ramya@testemail.com\",\"role\": \"Head of Sales\"}]",
+        "functionName": "admin",
+        "category": "Function",
+        "x": 555,
+        "y": 140,
+        "wires": [
+            [
+                "sd_CGKWRleS5AShdG7o"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_CGKWRleS5AShdG7o",
+        "type": "Script",
+        "z": "sd_5gIzrHfaDEzvw4ja",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "reg Staff",
+        "script": "\npage.regularStaff = [\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"BK\",\"email\":\"bk@testemail.com\",\"role\": \"Junior Dev\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Prince\",\"email\":\"prince@testemail.com\",\"role\": \"Junior Dev\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Neo\",\"email\":\"neo@testemail.com\",\"role\": \"Junior Dev\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Moon\",\"email\":\"moon@testemail.com\",\"role\": \"Junior Dev\"},\n\t]\n",
+        "functionName": "regStaff",
+        "category": "Function",
+        "x": 650,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

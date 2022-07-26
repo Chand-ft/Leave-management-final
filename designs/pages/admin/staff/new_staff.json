@@ -1,0 +1,155 @@
+[
+    {
+        "id": "sd_lnTQlTHgZSjBGMn8",
+        "type": "tab",
+        "createdDate": "2022-07-25T17:13:43.312Z",
+        "label": "new_staff",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "new_staffComponent"
+    },
+    {
+        "id": "sd_M9O72w0OC1ooeNbX",
+        "type": "OnInit",
+        "z": "sd_lnTQlTHgZSjBGMn8",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_M9O72w0OC1ooeNbX",
+        "category": "Lifecycle Events",
+        "x": 305,
+        "y": 220,
+        "wires": [
+            [
+                "sd_iWr4E6EB5MkXPjnT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "new_staffComponent"
+    },
+    {
+        "id": "sd_iWr4E6EB5MkXPjnT",
+        "type": "PageVariables",
+        "z": "sd_lnTQlTHgZSjBGMn8",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "addStaff",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_iWr4E6EB5MkXPjnT",
+        "category": "Function",
+        "x": 405,
+        "y": 220,
+        "wires": [
+            [
+                "sd_gduIFD4519oYrDrz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_bsJFpsynbRJMhxBF",
+        "type": "Script",
+        "z": "sd_lnTQlTHgZSjBGMn8",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.addStaff = new FormGroup({\n    firstName: new FormControl('', [Validators.required]),\n    lastName: new FormControl('', [Validators.required]),\n    email: new FormControl('', [Validators.required]),\n    phoneNumber: new FormControl('', [Validators.required]),\n    role: new FormControl('', [Validators.required]),\n    physicalAddress: new FormControl('', [Validators.required]),\n });\nconsole.log(\"form\", page.addStaff);\n",
+        "functionName": "sd_bsJFpsynbRJMhxBF",
+        "category": "Function",
+        "x": 605,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_gduIFD4519oYrDrz",
+        "type": "UseDependency",
+        "z": "sd_lnTQlTHgZSjBGMn8",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "FG"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ValidationErrors",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_gduIFD4519oYrDrz",
+        "category": "Function",
+        "x": 500.88888931274414,
+        "y": 220,
+        "wires": [
+            [
+                "sd_bsJFpsynbRJMhxBF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

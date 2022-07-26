@@ -1,0 +1,88 @@
+{
+    "routes": [
+        {
+            "component": "base_layoutComponent",
+            "path": "home",
+            "children": [
+                {
+                    "component": "admin_landingComponent",
+                    "path": "admin",
+                    "children": [
+                        {
+                            "component": "admin_dashboardComponent",
+                            "path": "dashboard"
+                        },
+                        {
+                            "component": "admin_departmentComponent",
+                            "path": "department"
+                        },
+                        {
+                            "component": "staff_portalComponent",
+                            "path": "staff-portal"
+                        },
+                        {
+                            "path": "all-leave",
+                            "component": "all_leaveComponent"
+                        },
+                        {
+                            "path": "manage",
+                            "component": "manage_staffComponent"
+                        },
+                        {
+                            "path": "application",
+                            "component": "admin_leave_applicationComponent"
+                        },
+                        {
+                            "path": "details",
+                            "component": "leave_detailsComponent"
+                        },
+                        {
+                            "component": "new_staffComponent",
+                            "path": "new"
+                        },
+                        {
+                            "path": "profile",
+                            "component": "admin_profileComponent"
+                        }
+                    ]
+                },
+                {
+                    "path": "staff",
+                    "component": "staff_landingComponent",
+                    "children": [
+                        {
+                            "path": "dashboard",
+                            "component": "staff_dashboardComponent"
+                        },
+                        {
+                            "path": "application",
+                            "component": "leave_applicationComponent"
+                        },
+                        {
+                            "component": "leave_historyComponent",
+                            "path": "history"
+                        },
+                        {
+                            "path": "profile",
+                            "component": "profileComponent"
+                        }
+                    ]
+                },
+                {
+                    "path": "login",
+                    "component": "loginComponent"
+                }
+            ]
+        },
+        {
+            "path": "''",
+            "redirectTo": "home/login",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

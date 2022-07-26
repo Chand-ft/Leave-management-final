@@ -1,0 +1,105 @@
+[
+    {
+        "id": "sd_06Mj5esftLRWFE0E",
+        "type": "tab",
+        "createdDate": "2022-07-24T12:20:35.508Z",
+        "label": "leave_history",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "leave_historyComponent"
+    },
+    {
+        "id": "sd_000AEBD8c1h3IEb7",
+        "type": "OnInit",
+        "z": "sd_06Mj5esftLRWFE0E",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_000AEBD8c1h3IEb7",
+        "category": "Lifecycle Events",
+        "x": 525,
+        "y": 300,
+        "wires": [
+            [
+                "sd_ZfgtkgIvHOwETYix"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "leave_historyComponent"
+    },
+    {
+        "id": "sd_ZfgtkgIvHOwETYix",
+        "type": "PageVariables",
+        "z": "sd_06Mj5esftLRWFE0E",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "dataInfoBoxes",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "employees",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "adminStaff",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "regularStaff",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_ZfgtkgIvHOwETYix",
+        "category": "Function",
+        "x": 625,
+        "y": 300,
+        "wires": [
+            [
+                "sd_jdKMKuZo1zPasPgT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_jdKMKuZo1zPasPgT",
+        "type": "Script",
+        "z": "sd_06Mj5esftLRWFE0E",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.dataInfoBoxes = [{\n\t\"number\": 7,\n\t\"text\": \"Total Staff\",\n\t\"icon\": \"person\",\n\t\"colour\": \"white\"\n\n},\n{\n\t\"number\": 3,\n\t\"text\": \"Approved Leave\",\n\t\"icon\": \"thumb_up\",\n\t\"colour\": \"green\"\n},\n{\n\t\"number\": 1,\n\t\"text\": \"Pending leave\",\n\t\"icon\": \"hourglass_empty\",\n\t\"colour\": \"yellow\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Rejected leave\",\n\t\"icon\": \"thumb_down\",\n\t\"colour\": \"red\"\n\n}]\n\n",
+        "functionName": "sd_jdKMKuZo1zPasPgT",
+        "category": "Function",
+        "x": 715,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

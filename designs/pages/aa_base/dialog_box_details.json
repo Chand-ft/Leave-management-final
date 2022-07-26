@@ -1,0 +1,232 @@
+[
+    {
+        "id": "sd_VENuDC99MMwEMfCo",
+        "type": "tab",
+        "createdDate": "2022-07-25T15:35:19.829Z",
+        "label": "dialog_box_details",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "dialog_box_detailsComponent"
+    },
+    {
+        "id": "sd_P9F7jrS1LRtWSkwx",
+        "type": "OnInit",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_P9F7jrS1LRtWSkwx",
+        "category": "Lifecycle Events",
+        "x": 125,
+        "y": 220,
+        "wires": [
+            [
+                "sd_BuYHc2lqz8yoPEoP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dialog_box_detailsComponent"
+    },
+    {
+        "id": "sd_BuYHc2lqz8yoPEoP",
+        "type": "PageVariables",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "approveOrRejectOptions",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "approveOrReject",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "dialog",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_BuYHc2lqz8yoPEoP",
+        "category": "Function",
+        "x": 205,
+        "y": 220,
+        "wires": [
+            [
+                "sd_cal6C4thUHrcEbfF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_QYEA2HFrFTh03Abs",
+        "type": "Script",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\npage.approveOrReject = new FormGroup({\n    option : new FormControl('', [Validators.required]),\n  });\n",
+        "functionName": "sd_QYEA2HFrFTh03Abs",
+        "category": "Function",
+        "x": 365,
+        "y": 220,
+        "wires": [
+            [
+                "sd_xNkOv97YCML0LCkg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_xNkOv97YCML0LCkg",
+        "type": "Script",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.approveOrRejectOptions = [\n        {option: 'Approve'},\n        {option: 'Reject'},\n     ];",
+        "functionName": "sd_xNkOv97YCML0LCkg",
+        "category": "Function",
+        "x": 448,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_cal6C4thUHrcEbfF",
+        "type": "UseDependency",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "FG"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_cal6C4thUHrcEbfF",
+        "category": "Function",
+        "x": 285,
+        "y": 220,
+        "wires": [
+            [
+                "sd_QYEA2HFrFTh03Abs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_9VE1vBoD2eygLtRW",
+        "type": "PageStart",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "closeDialog",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "closeDialog",
+        "category": "General",
+        "x": 145,
+        "y": 320,
+        "wires": [
+            [
+                "sd_3MmqxfdtNQx5vmh2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dialog_box_detailsComponent"
+    },
+    {
+        "id": "sd_3MmqxfdtNQx5vmh2",
+        "type": "CloseDialog",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.dialog",
+        "functionName": "sd_3MmqxfdtNQx5vmh2",
+        "category": "Dialog",
+        "x": 235.171875,
+        "y": 320.03125,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "dialog",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]
