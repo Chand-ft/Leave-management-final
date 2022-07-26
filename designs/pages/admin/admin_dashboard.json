@@ -17,9 +17,12 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
         "functionName": "sd_vUDL9UsXaM0qC3B3",
         "category": "Lifecycle Events",
-        "x": 185,
+        "x": 65,
         "y": 180,
         "wires": [
             [
@@ -68,15 +71,64 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "system.oauthService.userInfo"
+                }
+            },
+            {
+                "textIp": "staff",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "userMongo",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "isEmployee",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "leaveDays",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "objKeys",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "objValues",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_PO0kvmKE2DOhU2RB",
         "category": "Function",
-        "x": 265,
+        "x": 165,
         "y": 180,
         "wires": [
             [
-                "sd_4487OH8YGCGYG6Kv"
+                "sd_vps6D2jcuYbmI2Ls"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -90,35 +142,14 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.dataInfoBoxes = [{\n\t\"number\": 7,\n\t\"text\": \"Total Staff\",\n\t\"icon\": \"person\",\n\t\"colour\": \"white\"\n\n},\n{\n\t\"number\": 3,\n\t\"text\": \"Approved Leave\",\n\t\"icon\": \"thumb_up\",\n\t\"colour\": \"green\"\n},\n{\n\t\"number\": 1,\n\t\"text\": \"Pending leave\",\n\t\"icon\": \"hourglass_empty\",\n\t\"colour\": \"yellow\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Rejected leave\",\n\t\"icon\": \"thumb_down\",\n\t\"colour\": \"red\"\n\n}]\n\n",
+        "script": "page.isEmployee = page.userMongo[0].role !== 'Line Manager' ? true : false;\npage.dataInfoBoxes = [{\n\t\"number\": 7,\n\t\"text\": \"Total Staff\",\n\t\"icon\": \"person\",\n\t\"colour\": \"white\"\n\n},\n{\n\t\"number\": 3,\n\t\"text\": \"Approved Leave\",\n\t\"icon\": \"thumb_up\",\n\t\"colour\": \"green\"\n},\n{\n\t\"number\": 1,\n\t\"text\": \"Pending leave\",\n\t\"icon\": \"hourglass_empty\",\n\t\"colour\": \"yellow\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Rejected leave\",\n\t\"icon\": \"thumb_down\",\n\t\"colour\": \"red\"\n\n}]\n\nconsole.log(this)",
         "functionName": "sd_4487OH8YGCGYG6Kv",
         "category": "Function",
-        "x": 355,
+        "x": 425,
         "y": 180,
         "wires": [
             [
-                "sd_thZbqUYAGj6JwN57"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_thZbqUYAGj6JwN57",
-        "type": "Script",
-        "z": "sd_XtPpSSadUQmuXKXR",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "employees attempt",
-        "script": "page.employees = [\n    {\t\"heading\": \"Admin\",\n\t\t\"staffDetails\":[\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Hilton\",\"email\":\"hilton@testemail.com\",\"role\": \"Line Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Mark\",\"email\":\"mark@testemail.com\",\"role\": \"Operations Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Disability\",\"email\":\"ramya@testemail.com\",\"role\": \"Head of Sales\"}\n\t]\n   },\n   {\"heading\": \"Staff\",\n\t\"staffDetails\":[\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"BK\",\"email\":\"bk@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Prince\",\"email\":\"prince@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Neo\",\"email\":\"neo@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Moon\",\"email\":\"moon@testemail.com\",\"role\": \"Disability\"},\n\n\t]\n   }\n]",
-        "functionName": "employeesAttempt",
-        "category": "Function",
-        "x": 455,
-        "y": 180,
-        "wires": [
-            [
-                "sd_dFFoLUOmMhrxpuug"
+                "sd_Iny6HUX55v4gWSxw"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -143,8 +174,7 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
+        "generateNext": true
     },
     {
         "id": "sd_OepvycLsUObN5O3l",
@@ -158,6 +188,184 @@
         "category": "Function",
         "x": 630,
         "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true
+    },
+    {
+        "id": "sd_vps6D2jcuYbmI2Ls",
+        "type": "Storage",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "staff"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "staff"
+        },
+        "functionName": "sd_vps6D2jcuYbmI2Ls",
+        "category": "Storage",
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "sd_9HXszlVT7GFJhBvv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_9HXszlVT7GFJhBvv",
+        "type": "Storage",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userMongo"
+        },
+        "functionName": "sd_9HXszlVT7GFJhBvv",
+        "category": "Storage",
+        "x": 345,
+        "y": 180,
+        "wires": [
+            [
+                "sd_4487OH8YGCGYG6Kv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_1tA3rMscAlfUPLVT",
+        "type": "PageCallService",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_MSma9GJuXg98ZzJs",
+            "type": "tab",
+            "createdDate": "2022-07-25T20:55:29.182Z",
+            "label": "client_service",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_e3SpyZ5sB2xLCtH4",
+            "flowName": "dynamicApiCall"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "path"
+            },
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "results",
+                "valueType": "this.page",
+                "value": "leaveDays",
+                "mapVarName": "results",
+                "localVar": "this.page.leaveDays"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/client_service",
+        "startName": "dynamicApiCall",
+        "inputParams": [
+            "bh.input.path",
+            "bh.input.body",
+            "bh.input.method"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_1tA3rMscAlfUPLVT",
+        "category": "General",
+        "x": 565,
+        "y": 300,
+        "wires": [
+            [
+                "sd_DH3mbnmPD89gmgSm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Iny6HUX55v4gWSxw",
+        "type": "Script",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.path = 'getLeaveDays/' + page.userMongo[0].email;\nbh.input.method = 'Get';\nbh.input.body = {\n    \"email\" : page.userMongo[0].email\n};\n\n",
+        "functionName": "sd_Iny6HUX55v4gWSxw",
+        "category": "Function",
+        "x": 465,
+        "y": 300,
+        "wires": [
+            [
+                "sd_1tA3rMscAlfUPLVT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_DH3mbnmPD89gmgSm",
+        "type": "Script",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(Object.keys(\"LD\" ,page.leaveDays));\n// console.log(\"LD\" ,page.leaveDays);\ndelete page.leaveDays[0][\"_id\"];\ndelete page.leaveDays[0][\"owner\"];\n\nconsole.log(\"keys\", Object.keys(page.leaveDays[0]));\nconsole.log(\"values\", Object.values(page.leaveDays[0]));\npage.objValues = Object.values(page.leaveDays[0]);\npage.objKeys = Object.keys(page.leaveDays[0]);\n\npage.objKeys = ['Sick leave', 'Annual leave', 'Compassionate leave','Special leave']\npage.objValues = [{\n    label: 'Leave Days',\n    data: page.objValues,\n}]",
+        "functionName": "sd_DH3mbnmPD89gmgSm",
+        "category": "Function",
+        "x": 645,
+        "y": 300,
         "wires": [
             []
         ],

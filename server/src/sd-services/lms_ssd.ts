@@ -514,6 +514,58 @@ export class lms_ssd {
         this.generatedMiddlewares
       )
     );
+
+    if (!this.swaggerDocument['paths']['/get-users']) {
+      this.swaggerDocument['paths']['/get-users'] = {
+        get: {
+          summary: '',
+          description: '',
+          consumes: [],
+          produces: [],
+          parameters: [],
+          responses: {},
+        },
+      };
+    } else {
+      this.swaggerDocument['paths']['/get-users']['get'] = {
+        summary: '',
+        description: '',
+        consumes: [],
+        produces: [],
+        parameters: [],
+        responses: {},
+      };
+    }
+    this.app['get'](
+      `${this.serviceBasePath}/get-users`,
+      cookieParser(),
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'pre',
+        this.generatedMiddlewares
+      ),
+
+      async (req, res, next) => {
+        let bh = {};
+        try {
+          bh = this.sdService.__constructDefault(
+            { local: {}, input: {} },
+            req,
+            res,
+            next
+          );
+          bh = await this.sd_ZkQdY1IZaeS0aVve(bh);
+          //appendnew_next_sd_wPiobFQZgOXzvege
+        } catch (e) {
+          return await this.errorHandler(bh, e, 'sd_wPiobFQZgOXzvege');
+        }
+      },
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'post',
+        this.generatedMiddlewares
+      )
+    );
     //appendnew_flow_lms_ssd_HttpIn
   }
   //   service flows_lms_ssd
@@ -623,7 +675,7 @@ export class lms_ssd {
     try {
       bh.input.query = {
         email: bh.input.body.email,
-        password: bh.input.body.password,
+        // password: bh.input.body.password
       };
       bh = await this.checkIfUserIsRegistered(bh);
       //appendnew_next_sd_hL2RkgGoZAgh8CO7
@@ -1008,6 +1060,32 @@ export class lms_ssd {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_NsAap1u98eBctIHb');
+    }
+  }
+
+  async sd_ZkQdY1IZaeS0aVve(bh) {
+    try {
+      bh.local.result = await MongoPersistance.getInstance().find(
+        'sd_2nvaxbLqUVsRQhHb',
+        'users',
+        bh.input.query,
+        {}
+      );
+      await this.sd_R1TQ3lEVE0Jyuvph(bh);
+      //appendnew_next_sd_ZkQdY1IZaeS0aVve
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_ZkQdY1IZaeS0aVve');
+    }
+  }
+
+  async sd_R1TQ3lEVE0Jyuvph(bh) {
+    try {
+      bh.web.res.status(200).send(bh.local.result);
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_R1TQ3lEVE0Jyuvph');
     }
   }
 

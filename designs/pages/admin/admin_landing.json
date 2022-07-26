@@ -68,6 +68,27 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "system.oauthService.userInfo"
+                }
+            },
+            {
+                "textIp": "userMongo",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "isEmployee",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
             }
         ],
         "functionName": "sd_VaDuQyGiksH1Dl2c",
@@ -76,7 +97,8 @@
         "y": 140,
         "wires": [
             [
-                "sd_1S0ZEdQMsZJlW4Pv"
+                "sd_w06olSaK17IRbmOL",
+                "sd_azcmUbEsS4apkbrx"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -84,82 +106,156 @@
         "generated": true
     },
     {
-        "id": "sd_1S0ZEdQMsZJlW4Pv",
+        "id": "sd_02ymrAtILjygBTGG",
+        "type": "PageStart",
+        "z": "sd_t16NVMLk1aOewOG8",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getUser",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getUser",
+        "category": "General",
+        "x": 80,
+        "y": 300,
+        "wires": [
+            [
+                "sd_seYA9tOZT3tQvk8L"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "admin_landingComponent"
+    },
+    {
+        "id": "sd_seYA9tOZT3tQvk8L",
+        "type": "PageServiceVariables",
+        "z": "sd_t16NVMLk1aOewOG8",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user"
+                }
+            }
+        ],
+        "functionName": "sd_seYA9tOZT3tQvk8L",
+        "service": {
+            "id": "sd_MSma9GJuXg98ZzJs",
+            "type": "tab",
+            "createdDate": "2022-07-25T20:55:29.182Z",
+            "label": "client_service",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "generateNext": true,
+            "serviceName": "client_service",
+            "relativeParentPath": "",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/client_service",
+        "category": "Function",
+        "x": 220,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_GeO26J1n0HZYVgll",
         "type": "Script",
         "z": "sd_t16NVMLk1aOewOG8",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.dataInfoBoxes = [{\n\t\"number\": 7,\n\t\"text\": \"Total Staff\",\n\t\"icon\": \"person\",\n\t\"colour\": \"white\"\n\n},\n{\n\t\"number\": 3,\n\t\"text\": \"Approved Leave\",\n\t\"icon\": \"thumb_up\",\n\t\"colour\": \"green\"\n},\n{\n\t\"number\": 1,\n\t\"text\": \"Pending leave\",\n\t\"icon\": \"hourglass_empty\",\n\t\"colour\": \"yellow\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Rejected leave\",\n\t\"icon\": \"thumb_down\",\n\t\"colour\": \"red\"\n\n}]\n\n",
-        "functionName": "sd_1S0ZEdQMsZJlW4Pv",
-        "category": "Function",
-        "x": 305,
-        "y": 140,
-        "wires": [
-            [
-                "sd_Y6Cj1FNKTN1UfVDk"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_Y6Cj1FNKTN1UfVDk",
-        "type": "Script",
-        "z": "sd_t16NVMLk1aOewOG8",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "employees attempt",
-        "script": "page.employees = [\n    {\t\"heading\": \"Admin\",\n\t\t\"staffDetails\":[\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Hilton\",\"email\":\"hilton@testemail.com\",\"role\": \"Line Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Mark\",\"email\":\"mark@testemail.com\",\"role\": \"Operations Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Disability\",\"email\":\"ramya@testemail.com\",\"role\": \"Head of Sales\"}\n\t]\n   },\n   {\"heading\": \"Staff\",\n\t\"staffDetails\":[\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"BK\",\"email\":\"bk@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Prince\",\"email\":\"prince@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Neo\",\"email\":\"neo@testemail.com\",\"role\": \"Disability\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Moon\",\"email\":\"moon@testemail.com\",\"role\": \"Disability\"},\n\n\t]\n   }\n]",
-        "functionName": "employeesAttempt",
-        "category": "Function",
-        "x": 405,
-        "y": 140,
-        "wires": [
-            [
-                "sd_SJhKdpoyLqIYODrl"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_SJhKdpoyLqIYODrl",
-        "type": "Script",
-        "z": "sd_t16NVMLk1aOewOG8",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "admin",
-        "script": "page.adminStaff = [\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Hilton\",\"email\":\"hilton@testemail.com\",\"role\": \"Line Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Mark\",\"email\":\"mark@testemail.com\",\"role\": \"Operations Manager\"},\n       {\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Disability\",\"email\":\"ramya@testemail.com\",\"role\": \"Head of Sales\"}]",
-        "functionName": "admin",
+        "script": "page.isEmployee = page.userMongo[0].role == 'Line Manager' ? true : false;\n",
+        "functionName": "sd_GeO26J1n0HZYVgll",
         "category": "Function",
         "x": 485,
         "y": 140,
         "wires": [
-            [
-                "sd_kddRfvH63yJ9wHEn"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true
     },
     {
-        "id": "sd_kddRfvH63yJ9wHEn",
-        "type": "Script",
+        "id": "sd_w06olSaK17IRbmOL",
+        "type": "Log",
         "z": "sd_t16NVMLk1aOewOG8",
-        "viewType": "common",
+        "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "reg Staff",
-        "script": "\npage.regularStaff = [\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"BK\",\"email\":\"bk@testemail.com\",\"role\": \"Junior Dev\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Prince\",\"email\":\"prince@testemail.com\",\"role\": \"Junior Dev\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Neo\",\"email\":\"neo@testemail.com\",\"role\": \"Junior Dev\"},\n\t{\"image\":\"/Web/Downloaded images/userIcon.png\" ,\"name\": \"Moon\",\"email\":\"moon@testemail.com\",\"role\": \"Junior Dev\"},\n\t]\n",
-        "functionName": "regStaff",
-        "category": "Function",
-        "x": 580,
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page",
+        "functionName": "sd_w06olSaK17IRbmOL",
+        "category": "General",
+        "x": 505,
+        "y": 240,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_azcmUbEsS4apkbrx",
+        "type": "Storage",
+        "z": "sd_t16NVMLk1aOewOG8",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userMongo"
+        },
+        "functionName": "sd_azcmUbEsS4apkbrx",
+        "category": "Storage",
+        "x": 345,
         "y": 140,
         "wires": [
-            []
+            [
+                "sd_GeO26J1n0HZYVgll"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

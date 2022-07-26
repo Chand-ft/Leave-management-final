@@ -924,35 +924,10 @@ export class ids {
       // Remove user info and tokenset before login redirect
       bh.local.sessionData.data.tokenset = null;
       bh.local.sessionData.data.userInfo = null;
-      bh = await this.sd_dCWCI7Lqpk6tk1KJ(bh);
       //appendnew_next_sd_Q2c2RtIANEnSJGeV
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_Q2c2RtIANEnSJGeV');
-    }
-  }
-
-  async sd_dCWCI7Lqpk6tk1KJ(bh) {
-    try {
-      let requestObject = bh.web.req;
-      if (requestObject.session) {
-        requestObject.session.data = bh.local.sessionData.data;
-      }
-      await this.sd_KnrUTFr7J3p2TTnj(bh);
-      //appendnew_next_sd_dCWCI7Lqpk6tk1KJ
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_dCWCI7Lqpk6tk1KJ');
-    }
-  }
-
-  async sd_KnrUTFr7J3p2TTnj(bh) {
-    try {
-      bh.web.res.status(200).send(bh.local.res);
-
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_KnrUTFr7J3p2TTnj');
     }
   }
 
@@ -966,6 +941,16 @@ export class ids {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_26qh4ybCJIt1pTdg');
+    }
+  }
+
+  async sd_KnrUTFr7J3p2TTnj(bh) {
+    try {
+      bh.web.res.status(200).send(bh.local.res);
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_KnrUTFr7J3p2TTnj');
     }
   }
 

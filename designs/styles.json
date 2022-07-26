@@ -107,6 +107,9 @@
         "leaveDetails",
         "loginBGColour",
         "loginWhiteBox",
-        "height40px"
+        "height40px",
+        "yellowStatus",
+        "greenStatus",
+        "redStatus"
     ]
 }

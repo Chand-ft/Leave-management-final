@@ -1313,8 +1313,8 @@
                                 "453e1ddb-29ad-9ad8-81c2-9f64011b0804": {
                                     "paletteKey": "FlexLayoutRow",
                                     "parentEditorKey": "b6aa7ee8-cd15-7d15-b8ed-ab990095ef49",
-                                    "isCommented": "false",
-                                    "commentid": null,
+                                    "isCommented": "true",
+                                    "commentid": "1658853484609",
                                     "designerReference": [
                                         {
                                             "_key": "componentLabel",
@@ -1378,8 +1378,8 @@
                                     "bb0a5b37-0bba-0370-c60f-94e13a0d3103": {
                                         "paletteKey": "NG-icon",
                                         "parentEditorKey": "453e1ddb-29ad-9ad8-81c2-9f64011b0804",
-                                        "isCommented": "false",
-                                        "commentid": null,
+                                        "isCommented": "true",
+                                        "commentid": "1658853484609",
                                         "designerReference": [
                                             {
                                                 "_key": "style",
@@ -1418,8 +1418,8 @@
                                         "paletteKey": "Html5",
                                         "parentEditorKey": "453e1ddb-29ad-9ad8-81c2-9f64011b0804",
                                         "isAdvancedComponent": true,
-                                        "isCommented": "false",
-                                        "commentid": null,
+                                        "isCommented": "true",
+                                        "commentid": "1658853484609",
                                         "designerReference": [
                                             {
                                                 "_key": "style",
@@ -1606,8 +1606,8 @@
                                             "paletteKey": "html-editor",
                                             "parentEditorKey": "4476206e-e91d-5d24-e911-a379051a3b83",
                                             "isAdvancedChildComponent": true,
-                                            "isCommented": "false",
-                                            "commentid": null,
+                                            "isCommented": "true",
+                                            "commentid": "1658853484609",
                                             "designerReference": [
                                                 {
                                                     "_key": "style",

@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_AVFH4J5zlGffvOWe",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 65,
+        "y": 80,
         "wires": [
             [
                 "sd_jBehYYQu9Etu5LJD"
@@ -40,11 +40,295 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "userMongo",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "leaveList",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "isEmployee",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            }
+        ],
         "functionName": "sd_jBehYYQu9Etu5LJD",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 80,
+        "wires": [
+            [
+                "sd_5Bgq8WlFjlgLyPna"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_5Bgq8WlFjlgLyPna",
+        "type": "Storage",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userMongo"
+        },
+        "functionName": "sd_5Bgq8WlFjlgLyPna",
+        "category": "Storage",
+        "x": 285,
+        "y": 80,
+        "wires": [
+            [
+                "sd_WiUKJxXVrg6iqeEd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_PsnKfYWFcZeOY1vP",
+        "type": "PageStart",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "fetchLeave",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "fetchLeave",
+        "category": "General",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "sd_PdOS9BbwKeRE7ZhD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "all_leaveComponent"
+    },
+    {
+        "id": "sd_PdOS9BbwKeRE7ZhD",
+        "type": "Script",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.path = 'getPendingRequests';\nbh.input.method = 'POST';\nbh.input.body = {\n    email: page.userMongo[0].email\n};\n\nconsole.log(bh.input)",
+        "functionName": "sd_PdOS9BbwKeRE7ZhD",
+        "category": "Function",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "sd_mVROWvgjk3A1GXdj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_mVROWvgjk3A1GXdj",
+        "type": "PageCallService",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_MSma9GJuXg98ZzJs",
+            "type": "tab",
+            "createdDate": "2022-07-25T20:55:29.182Z",
+            "label": "client_service",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_e3SpyZ5sB2xLCtH4",
+            "flowName": "dynamicApiCall"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "path"
+            },
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "results",
+                "valueType": "this.page",
+                "value": "leaveList",
+                "mapVarName": "results",
+                "localVar": "this.page.leaveList"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/client_service",
+        "startName": "dynamicApiCall",
+        "inputParams": [
+            "bh.input.path",
+            "bh.input.body",
+            "bh.input.method"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_mVROWvgjk3A1GXdj",
+        "category": "General",
+        "x": 365,
+        "y": 260,
+        "wires": [
+            [
+                "sd_2TNFGjiIOKA8ZVQb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_t7lpaD9G0k369l6d",
+        "type": "Log",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.leaveList",
+        "functionName": "sd_t7lpaD9G0k369l6d",
+        "category": "General",
+        "x": 520,
+        "y": 260,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "leaveList",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_WiUKJxXVrg6iqeEd",
+        "type": "PageCallService",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_fqqNMHeefqVerwOE",
+            "type": "tab",
+            "createdDate": "2022-07-24T10:54:03.597Z",
+            "label": "all_leave",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_PsnKfYWFcZeOY1vP",
+            "flowName": "fetchLeave"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./all_leave",
+        "startName": "fetchLeave",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": false,
+        "functionName": "sd_WiUKJxXVrg6iqeEd",
+        "category": "General",
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "sd_nCJ5Cqd3C8aPpjmw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_2TNFGjiIOKA8ZVQb",
+        "type": "Script",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\n\nfor (var i = 0; i < page.leaveList.length; i++){\n    page.leaveList[i].startDate = transformDate(page.leaveList[i].startDate)\n    page.leaveList[i].endDate =  transformDate(page.leaveList[i].endDate)\n    console.log(page.leaveList[i])\n}\n\nfunction transformDate(date){\n date = Date.parse(date);\n date = new Date(date);\n date = date.toLocaleDateString(\"en-US\", options);\n\n return date\n}",
+        "functionName": "sd_2TNFGjiIOKA8ZVQb",
+        "category": "Function",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "sd_t7lpaD9G0k369l6d"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nCJ5Cqd3C8aPpjmw",
+        "type": "Script",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.isEmployee = page.userMongo[0].role !== 'Line Manager' ? true : false;\nconsole.log('all leave',page)\n",
+        "functionName": "sd_nCJ5Cqd3C8aPpjmw",
+        "category": "Function",
+        "x": 520,
+        "y": 100,
         "wires": [
             []
         ],

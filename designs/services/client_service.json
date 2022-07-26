@@ -58,7 +58,7 @@
         "accept_bh": false,
         "functionName": "dynamicApiCall",
         "category": "General",
-        "x": 105,
+        "x": 65,
         "y": 120,
         "wires": [
             [
@@ -188,8 +188,8 @@
         "accept_bh": false,
         "functionName": "logout",
         "category": "General",
-        "x": 110,
-        "y": 220,
+        "x": 105,
+        "y": 320,
         "wires": [
             [
                 "sd_dMSxC8Sc7nUo4DVc"
@@ -214,8 +214,8 @@
         "resultMapping": {},
         "functionName": "sd_dMSxC8Sc7nUo4DVc",
         "category": "Storage",
-        "x": 205,
-        "y": 220,
+        "x": 200,
+        "y": 320,
         "wires": [
             [
                 "sd_MYHl1wlbVcilPcgp"
@@ -242,8 +242,8 @@
         "resultMapping": "",
         "functionName": "sd_MYHl1wlbVcilPcgp",
         "category": "Navigation",
-        "x": 305,
-        "y": 220,
+        "x": 300,
+        "y": 320,
         "wires": [
             []
         ],
