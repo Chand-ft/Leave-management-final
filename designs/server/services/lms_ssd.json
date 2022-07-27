@@ -1562,7 +1562,6 @@
             "obj": "bh.local.result",
             "send": "bh.local.result"
         },
-        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -1699,7 +1698,7 @@
         },
         "functionName": "sd_NsAap1u98eBctIHb",
         "category": "HTTP",
-        "x": 825,
+        "x": 925,
         "y": 1080,
         "wires": [],
         "__n_excludedFromValidation__": {},
@@ -1744,7 +1743,7 @@
         "pipeline": "",
         "functionName": "updateLRStatus",
         "category": "Storage",
-        "x": 385,
+        "x": 425,
         "y": 1080,
         "wires": [
             [
@@ -1800,7 +1799,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\nbh.input.filter = {\n    owner: bh.input.body.owner,\n    startDate: bh.input.body.startDate\n}\nbh.input.updateStatus = {\n    $set: {\n         status: bh.input.body.status\n     }\n}\n\n",
+        "script": "bh.input.filter = {\n    owner: bh.input.body.owner,\n    textArea: bh.input.body.textArea\n}\nbh.input.updateStatus = {\n    $set: {\n         status: bh.input.body.status\n     }\n}\n\nconsole.log('hi', bh.input)\n",
         "functionName": "sd_BgJfeMQEJLBjhLP3",
         "category": "Function",
         "x": 300,
@@ -1824,7 +1823,7 @@
         "script": "\nbh.input.filter = {\n    owner: bh.input.body.owner\n}\n\n",
         "functionName": "sd_MJXH3Gc7KhoXWU4s",
         "category": "Function",
-        "x": 465,
+        "x": 545,
         "y": 1080,
         "wires": [
             [
@@ -1872,7 +1871,7 @@
         "pipeline": "",
         "functionName": "getLDbyOwner",
         "category": "Storage",
-        "x": 545,
+        "x": 665,
         "y": 1080,
         "wires": [
             [
@@ -1931,7 +1930,7 @@
         "script": "console.log('input',bh.input)\nvar leaveReq = bh.input.body;\n\nvar numberOfDays = datediff(leaveReq.startDate,leaveReq.endDate);\nconsole.log(numberOfDays)\n\nvar leaveDays = bh.local.result[0]\nleaveDays[leaveReq.leaveType] = Number(leaveDays[leaveReq.leaveType]) - numberOfDays;\n\nconsole.log(leaveDays)\n\n//differenece btwn start and end date\nfunction datediff(date1, date2) {\n    date1 = Date.parse(date1)\n    date2 = Date.parse(date2)\n    // The number of milliseconds in one day\n    const ONE_DAY = 1000 * 60 * 60 * 24;\n\n    // Calculate the difference in milliseconds\n    const differenceMs = Math.abs(date1 - date2);\n\n    // Convert back to days and return\n    return Math.round(differenceMs / ONE_DAY);\n}\n\n//prepare mongodb obects\n\nbh.input.filter = {\n    owner: bh.input.body.owner\n}\nbh.input.updateDays = {\n    $set: {\n         [leaveReq.leaveType] : leaveDays[leaveReq.leaveType]\n     }\n}",
         "functionName": "sd_hfW9a2hxOgJItRFb",
         "category": "Function",
-        "x": 620,
+        "x": 780,
         "y": 1080,
         "wires": [
             [
@@ -1980,7 +1979,7 @@
         "pipeline": "",
         "functionName": "updateLeaveTypeNumber",
         "category": "Storage",
-        "x": 725,
+        "x": 865,
         "y": 1080,
         "wires": [
             [

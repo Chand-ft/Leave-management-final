@@ -71,6 +71,13 @@
                     "type": "literal",
                     "value": "{}"
                 }
+            },
+            {
+                "textIp": "startDate",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "null"
+                }
             }
         ],
         "functionName": "sd_h2UcNOWDuufZSIMp",
@@ -93,7 +100,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.leaveApplication = new FormGroup({\n    leaveType: new FormControl('', [Validators.required]),\n    startDate: new FormControl(new Date(), [Validators.required]),\n    endDate: new FormControl('', [Validators.required]),\n    reasons: new FormControl('', [Validators.required])\n  });\nconsole.log(\"form\", page.leaveApplication);\n\npage.leaveType = [\n  \"Annual\", \"Sick\", \"Compassionate\",\"Special\"\n]\n\npage.todaysDate = new Date();",
+        "script": "page.leaveApplication = new FormGroup({\n    leaveType: new FormControl('', [Validators.required]),\n    startDate: new FormControl(new Date(), [Validators.required]),\n    endDate: new FormControl('', [Validators.required]),\n    reasons: new FormControl('', [Validators.required])\n  });\nconsole.log(\"form\", page.leaveApplication);\n\npage.leaveType = [\n  \"Annual\", \"Sick\", \"Compassionate\",\"Special\"\n]\n\npage.todaysDate = new Date();\n",
         "functionName": "sd_WEzogK28bdZKknZ2",
         "category": "Function",
         "x": 625,
@@ -348,7 +355,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -375,6 +384,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/admin/all-leave",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_9yTTW6b0sFfSrnHM",
         "category": "Navigation",
         "x": 585,

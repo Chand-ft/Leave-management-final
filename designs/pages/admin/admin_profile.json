@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_WNHaJs0Akio5rQWq",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 125,
+        "y": 140,
         "wires": [
             [
                 "sd_wTzRuuQWEaYkSYJx"
@@ -40,11 +40,19 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_wTzRuuQWEaYkSYJx",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 225,
+        "y": 140,
         "wires": [
             []
         ],

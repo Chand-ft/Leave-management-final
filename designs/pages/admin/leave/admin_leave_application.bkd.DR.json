@@ -2130,7 +2130,7 @@
                                                 },
                                                 {
                                                     "_key": "[(ngModel)]",
-                                                    "_value": "",
+                                                    "_value": "page.startDate",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2543,7 +2543,7 @@
                                                 },
                                                 {
                                                     "_key": "[min]",
-                                                    "_value": "page.todaysDate",
+                                                    "_value": "page.startDate",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },

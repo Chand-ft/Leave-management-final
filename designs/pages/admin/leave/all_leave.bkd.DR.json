@@ -1895,7 +1895,8 @@
                                     "_key": "(rowclick)",
                                     "_value": "",
                                     "_type": "a",
-                                    "_attrDef": "p"
+                                    "_attrDef": "p",
+                                    "_customAttributeFlag": "flowpicker"
                                 },
                                 {
                                     "_key": "header",
@@ -2224,7 +2225,7 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "ddc600ef-545a-2fac-8aa2-6681f896142b": {
+                                "9e780e79-fa1d-a9c8-1c20-5a265d54fd93": {
                                     "paletteKey": "FlexLayoutRow",
                                     "parentEditorKey": "d0048cd4-56d0-9dbb-0372-7ae4402a5ea6",
                                     "commentid": null,
@@ -2256,7 +2257,7 @@
                                         },
                                         {
                                             "_key": "fxLayoutGap",
-                                            "_value": "20px",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -2274,7 +2275,7 @@
                                         },
                                         {
                                             "_key": "pLayoutAlign",
-                                            "_value": "space-around",
+                                            "_value": "stretch",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -2285,18 +2286,12 @@
                                             "_attrDef": "p"
                                         }
                                     ],
-                                    "6858ff8b-6d30-1129-44c7-f06a66c3316e": {
-                                        "paletteKey": "FlexLayoutCol",
-                                        "parentEditorKey": "ddc600ef-545a-2fac-8aa2-6681f896142b",
+                                    "a9b0bd7f-93ab-2e09-05b6-58e79c83b654": {
+                                        "paletteKey": "NG-icon",
+                                        "parentEditorKey": "9e780e79-fa1d-a9c8-1c20-5a265d54fd93",
+                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
-                                            {
-                                                "_key": "componentLabel",
-                                                "_value": "Column",
-                                                "_type": "kv",
-                                                "_attrDef": "p",
-                                                "_useAsLabel": true
-                                            },
                                             {
                                                 "_key": "style",
                                                 "_value": "",
@@ -2310,108 +2305,48 @@
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "fxFlex",
+                                                "_key": "IconName",
+                                                "_value": "visibility",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "[inline]",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "fxLayoutGap",
+                                                "_key": "color",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "wrap",
-                                                "_value": "wrap",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "layoutAlign",
-                                                "_value": "start",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "pLayoutAlign",
-                                                "_value": "stretch",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "[fxShow]",
-                                                "_value": "true",
+                                                "_key": "(click)",
+                                                "_value": "leaveDetail(table.owner,table['_id'])",
                                                 "_type": "kv",
-                                                "_attrDef": "p"
-                                            }
-                                        ],
-                                        "6276e2c9-c821-191f-85fb-fd601cae367c": {
-                                            "paletteKey": "NG-icon",
-                                            "parentEditorKey": "6858ff8b-6d30-1129-44c7-f06a66c3316e",
-                                            "commentid": null,
-                                            "designerReference": [
-                                                {
-                                                    "_key": "style",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "class",
-                                                    "_value": "",
-                                                    "_type": "dav",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "IconName",
-                                                    "_value": "visibility",
-                                                    "_type": "a",
-                                                    "_attrDef": "p",
-                                                    "_useAsLabel": true
-                                                },
-                                                {
-                                                    "_key": "[inline]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "color",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "(click)",
-                                                    "_value": "leaveDetail(table.owner)",
-                                                    "_type": "kv",
-                                                    "_attrDef": "c",
-                                                    "objValue": {
-                                                        "nodeID": "sd_WROhBYs35Bnnh1SN",
-                                                        "functionName": "leaveDetail",
-                                                        "activeTree": "pages",
-                                                        "z": "sd_fqqNMHeefqVerwOE",
-                                                        "input": [
-                                                            "table.owner"
-                                                        ]
-                                                    }
+                                                "_attrDef": "c",
+                                                "objValue": {
+                                                    "nodeID": "sd_WROhBYs35Bnnh1SN",
+                                                    "functionName": "leaveDetail",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_fqqNMHeefqVerwOE",
+                                                    "input": [
+                                                        "table.owner",
+                                                        "table['_id']"
+                                                    ]
                                                 }
-                                            ]
-                                        }
+                                            }
+                                        ]
                                     },
-                                    "7feff43b-2903-e231-84cc-d8fa71bc4a05": {
-                                        "paletteKey": "FlexLayoutCol",
-                                        "parentEditorKey": "ddc600ef-545a-2fac-8aa2-6681f896142b",
+                                    "6276e2c9-c821-191f-85fb-fd601cae367c": {
+                                        "paletteKey": "NG-icon",
+                                        "parentEditorKey": "9e780e79-fa1d-a9c8-1c20-5a265d54fd93",
+                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
-                                            {
-                                                "_key": "componentLabel",
-                                                "_value": "Column",
-                                                "_type": "kv",
-                                                "_attrDef": "p",
-                                                "_useAsLabel": true
-                                            },
                                             {
                                                 "_key": "style",
                                                 "_value": "",
@@ -2425,95 +2360,40 @@
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "fxFlex",
+                                                "_key": "IconName",
+                                                "_value": "edit",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "[inline]",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "fxLayoutGap",
+                                                "_key": "color",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "wrap",
-                                                "_value": "wrap",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "layoutAlign",
-                                                "_value": "start",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "pLayoutAlign",
-                                                "_value": "stretch",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "[fxShow]",
-                                                "_value": "true",
+                                                "_key": "(click)",
+                                                "_value": "openDialog(table)",
                                                 "_type": "kv",
-                                                "_attrDef": "p"
-                                            }
-                                        ],
-                                        "37011cd7-064a-97e5-5268-039fd0b48348": {
-                                            "paletteKey": "NG-icon",
-                                            "parentEditorKey": "7feff43b-2903-e231-84cc-d8fa71bc4a05",
-                                            "commentid": null,
-                                            "designerReference": [
-                                                {
-                                                    "_key": "style",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "class",
-                                                    "_value": "",
-                                                    "_type": "dav",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "IconName",
-                                                    "_value": "edit",
-                                                    "_type": "a",
-                                                    "_attrDef": "p",
-                                                    "_useAsLabel": true
-                                                },
-                                                {
-                                                    "_key": "[inline]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "color",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "(click)",
-                                                    "_value": "openDialog(table)",
-                                                    "_type": "kv",
-                                                    "_attrDef": "c",
-                                                    "objValue": {
-                                                        "nodeID": "sd_2u8FO3Ow5kXCQAhL",
-                                                        "functionName": "openDialog",
-                                                        "activeTree": "pages",
-                                                        "z": "sd_fqqNMHeefqVerwOE",
-                                                        "input": [
-                                                            "table"
-                                                        ]
-                                                    }
+                                                "_attrDef": "c",
+                                                "objValue": {
+                                                    "nodeID": "sd_2u8FO3Ow5kXCQAhL",
+                                                    "functionName": "openDialog",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_fqqNMHeefqVerwOE",
+                                                    "input": [
+                                                        "table"
+                                                    ]
                                                 }
-                                            ]
-                                        }
+                                            }
+                                        ]
                                     }
                                 }
                             }

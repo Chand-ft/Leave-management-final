@@ -110,6 +110,8 @@
         "height40px",
         "yellowStatus",
         "greenStatus",
-        "redStatus"
+        "redStatus",
+        "loginText",
+        "loginButton"
     ]
 }

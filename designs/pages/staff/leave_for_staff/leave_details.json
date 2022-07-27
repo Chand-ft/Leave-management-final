@@ -54,6 +54,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "leaveData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "{}"
+                }
             }
         ],
         "functionName": "sd_TMNYHUroK496qQ7S",
@@ -263,10 +270,11 @@
         "functionName": "fetchUserInfo",
         "category": "General",
         "x": 65,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
-                "sd_2TidGxyawGQ7BHKX"
+                "sd_2TidGxyawGQ7BHKX",
+                "sd_uaOSAuRnNpa4ez7v"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -518,6 +526,57 @@
             [
                 "sd_QWS4DDews1Xcaabu"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_uaOSAuRnNpa4ez7v",
+        "type": "Storage",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "leaveData"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "bh",
+            "value": "leaveData"
+        },
+        "functionName": "sd_uaOSAuRnNpa4ez7v",
+        "category": "Storage",
+        "x": 165,
+        "y": 420,
+        "wires": [
+            [
+                "sd_NXUHgm2fwtUfTvF6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_NXUHgm2fwtUfTvF6",
+        "type": "Script",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.leaveData = bh.leaveData;",
+        "functionName": "sd_NXUHgm2fwtUfTvF6",
+        "category": "Function",
+        "x": 280,
+        "y": 420,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

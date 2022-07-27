@@ -136,7 +136,6 @@
         "serviceImportPath": "./base_layout",
         "startName": "fetchUserInfo",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_EIuVGWp841ljMXLm",
         "category": "General",
@@ -219,8 +218,8 @@
         "y": 200,
         "wires": [
             [
-                "sd_V61ihFs9oU3TBRLg",
-                "sd_zjO7pOz8ySxo3ubA"
+                "sd_zjO7pOz8ySxo3ubA",
+                "sd_S1gWwF2pPlvuAl01"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -274,8 +273,8 @@
         "logObject": "this.page.user",
         "functionName": "sd_V61ihFs9oU3TBRLg",
         "category": "General",
-        "x": 440,
-        "y": 280,
+        "x": 365,
+        "y": 340,
         "wires": [],
         "__ssdTypeInputs__": {
             "logObject": {
@@ -285,8 +284,7 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
+        "generateNext": true
     },
     {
         "id": "sd_zjO7pOz8ySxo3ubA",
@@ -561,7 +559,6 @@
         "serviceImportPath": "./base_layout",
         "startName": "fetchStaff",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_SGoAytSYQ43aeFRK",
         "category": "General",
@@ -580,12 +577,12 @@
         "z": "sd_r4vqo8PCcIHtOLRQ",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "fetchStaff2",
         "outputs": 0,
         "logObject": "bh.local",
-        "functionName": "sd_1iixLXDOtu4F09hI",
+        "functionName": "fetchStaff2",
         "category": "General",
-        "x": 545,
+        "x": 565,
         "y": 400,
         "wires": [],
         "__ssdTypeInputs__": {
@@ -596,8 +593,7 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
+        "generateNext": true
     },
     {
         "id": "sd_8ezH1BnMUzWfv1ie",
@@ -624,7 +620,7 @@
         "y": 400,
         "wires": [
             [
-                "sd_1iixLXDOtu4F09hI"
+                "sd_Rym6WFuPMI2yzzkk"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -658,6 +654,44 @@
             [
                 "sd_NrErLKnXXQvXCN9r"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_S1gWwF2pPlvuAl01",
+        "type": "Script",
+        "z": "sd_r4vqo8PCcIHtOLRQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('fetchUserInfo',page.user)",
+        "functionName": "sd_S1gWwF2pPlvuAl01",
+        "category": "Function",
+        "x": 365,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Rym6WFuPMI2yzzkk",
+        "type": "Script",
+        "z": "sd_r4vqo8PCcIHtOLRQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('bh.local',bh.local.result)",
+        "functionName": "sd_Rym6WFuPMI2yzzkk",
+        "category": "Function",
+        "x": 565,
+        "y": 480,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

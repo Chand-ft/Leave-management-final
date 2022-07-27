@@ -974,13 +974,15 @@ export class lms_ssd {
     try {
       bh.input.filter = {
         owner: bh.input.body.owner,
-        startDate: bh.input.body.startDate,
+        textArea: bh.input.body.textArea,
       };
       bh.input.updateStatus = {
         $set: {
           status: bh.input.body.status,
         },
       };
+
+      console.log('hi', bh.input);
 
       bh = await this.updateLRStatus(bh);
       //appendnew_next_sd_BgJfeMQEJLBjhLP3

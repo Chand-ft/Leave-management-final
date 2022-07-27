@@ -1149,138 +1149,6 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "2b77b9c8-a4da-fab3-daa3-2fc13064c3d4": {
-                        "paletteKey": "FlexLayoutRow",
-                        "parentEditorKey": "7cfc5359-a05c-66b2-4145-5481d9e8f063",
-                        "commentid": null,
-                        "designerReference": [
-                            {
-                                "_key": "componentLabel",
-                                "_value": "photo",
-                                "_type": "kv",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": [
-                                    "fullWidth"
-                                ],
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxFlex",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxLayoutGap",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "wrap",
-                                "_value": "wrap",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "layoutAlign",
-                                "_value": "center",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "pLayoutAlign",
-                                "_value": "stretch",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "[fxShow]",
-                                "_value": "true",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            }
-                        ],
-                        "b46f08f8-30b7-d897-5ecf-12016e437a61": {
-                            "paletteKey": "NG-image",
-                            "parentEditorKey": "2b77b9c8-a4da-fab3-daa3-2fc13064c3d4",
-                            "commentid": null,
-                            "designerReference": [
-                                {
-                                    "_key": "componentLabel",
-                                    "_value": "Image",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_useAsLabel": true
-                                },
-                                {
-                                    "_key": "style",
-                                    "_value": "border-radius:50%",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": "",
-                                    "_type": "dav",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "imgSrc",
-                                    "_value": "/Web/Downloaded images/default-profile-picture.png",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "alt",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[src]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "imgSecure",
-                                    "_value": "",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "width",
-                                    "_value": "150px",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "srcset",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "sizes",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                }
-                            ]
-                        }
-                    },
                     "cbd9ba25-990a-6b16-7015-339b877c142b": {
                         "paletteKey": "FlexLayoutRow",
                         "parentEditorKey": "7cfc5359-a05c-66b2-4145-5481d9e8f063",
@@ -1612,7 +1480,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<p>Name</p>",
+                                            "_value": "<p>user.name</p>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -1826,7 +1694,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<p>Department</p>",
+                                            "_value": "<p>user.role</p>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }

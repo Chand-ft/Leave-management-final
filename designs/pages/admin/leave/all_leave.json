@@ -258,7 +258,6 @@
         "serviceImportPath": "./all_leave",
         "startName": "fetchLeave",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_WiUKJxXVrg6iqeEd",
         "category": "General",
@@ -327,11 +326,9 @@
                     "value": ""
                 },
                 "output": false
-            }
-        ],
-        "localVariables": [
+            },
             {
-                "key": "tot",
+                "key": "id",
                 "defaultValue": {
                     "type": "any",
                     "value": ""
@@ -339,6 +336,7 @@
                 "output": false
             }
         ],
+        "localVariables": [],
         "flow_type": "sync",
         "functionName": "leaveDetail",
         "category": "General",
@@ -346,7 +344,7 @@
         "y": 380,
         "wires": [
             [
-                "sd_AH1zkJ4CFt5RQf3c"
+                "sd_Zq9iUZMSYAR5eRAx"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -363,42 +361,10 @@
         "path": "/home/admin/details",
         "functionName": "sd_SgR1KUzFyJAHw2xB",
         "category": "Navigation",
-        "x": 385,
+        "x": 445,
         "y": 380,
         "wires": [
             []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_AH1zkJ4CFt5RQf3c",
-        "type": "Storage",
-        "z": "sd_fqqNMHeefqVerwOE",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "setItem",
-        "storageType": "sessionStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "leaveOwner"
-        },
-        "value": {
-            "type": "bh.input",
-            "value": "owner"
-        },
-        "resultMapping": {},
-        "functionName": "sd_AH1zkJ4CFt5RQf3c",
-        "category": "Storage",
-        "x": 205,
-        "y": 380,
-        "wires": [
-            [
-                "sd_SgR1KUzFyJAHw2xB"
-            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -426,8 +392,8 @@
         "flow_type": "sync",
         "functionName": "openDialog",
         "category": "General",
-        "x": 85,
-        "y": 520,
+        "x": 65,
+        "y": 620,
         "wires": [
             [
                 "sd_D2MloTr8AnfA7Y7g"
@@ -473,8 +439,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_D2MloTr8AnfA7Y7g",
         "category": "Dialog",
-        "x": 220,
-        "y": 520,
+        "x": 200,
+        "y": 620,
         "wires": [
             [],
             [],
@@ -588,6 +554,91 @@
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_qqLalTf6m0mPICQh",
+        "type": "Storage",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "leaveData"
+        },
+        "value": {
+            "type": "bh",
+            "value": "leaveData"
+        },
+        "resultMapping": {},
+        "functionName": "sd_qqLalTf6m0mPICQh",
+        "category": "Storage",
+        "x": 265,
+        "y": 380,
+        "wires": [
+            [
+                "sd_mhRJkOi4nAXRZ0Pe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Zq9iUZMSYAR5eRAx",
+        "type": "Script",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let tempData = page.leaveList.filter(item => item['_id'] === bh.input.id);\nbh.leaveData = tempData.length > 0 ? tempData[0] : [];",
+        "functionName": "sd_Zq9iUZMSYAR5eRAx",
+        "category": "Function",
+        "x": 185,
+        "y": 380,
+        "wires": [
+            [
+                "sd_qqLalTf6m0mPICQh"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_mhRJkOi4nAXRZ0Pe",
+        "type": "Storage",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "leaveOwner"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "owner"
+        },
+        "resultMapping": {},
+        "functionName": "sd_mhRJkOi4nAXRZ0Pe",
+        "category": "Storage",
+        "x": 345,
+        "y": 380,
+        "wires": [
+            [
+                "sd_SgR1KUzFyJAHw2xB"
+            ]
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true

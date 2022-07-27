@@ -63,14 +63,21 @@
                 }
             },
             {
-                "textIp": "data",
+                "textIp": "status",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "leaveList",
                 "typedIpValue": {
                     "type": "literal",
                     "value": ""
                 }
             },
             {
-                "textIp": "leaveList",
+                "textIp": "leaveRequest",
                 "typedIpValue": {
                     "type": "literal",
                     "value": ""
@@ -88,8 +95,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true,
-        "serviceName": "dialog_box_detailsComponent"
+        "generated": true
     },
     {
         "id": "sd_QYEA2HFrFTh03Abs",
@@ -119,14 +125,14 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.approveOrRejectOptions = [\n        {option: 'Approved'},\n        {option: 'Reject'},\n     ];",
+        "script": "page.approveOrRejectOptions = [\n        {option: 'Approved'},\n        {option: 'Rejected'},\n     ];",
         "functionName": "sd_xNkOv97YCML0LCkg",
         "category": "Function",
         "x": 448,
         "y": 220,
         "wires": [
             [
-                "sd_krteHdpKkVOhQV8c"
+                "sd_ejJA1OKXIvdxyGZR"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -197,30 +203,6 @@
         "generated": true
     },
     {
-        "id": "sd_9VE1vBoD2eygLtRW",
-        "type": "PageStart",
-        "z": "sd_VENuDC99MMwEMfCo",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "getData",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "getData",
-        "category": "General",
-        "x": 125,
-        "y": 360,
-        "wires": [
-            [
-                "sd_yqnDnjma0kGd8uEL"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "dialog_box_detailsComponent"
-    },
-    {
         "id": "sd_wqGfkVY5lR45Z52e",
         "type": "PageStart",
         "z": "sd_VENuDC99MMwEMfCo",
@@ -251,7 +233,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.data.status = page.approveOrReject.controls['option'].value;\n\nbh.input.path = 'updateLeaveRequest';\nbh.input.method = 'POST';\nbh.input.body = page.data;\n",
+        "script": "// console.log('mango', page.leaveRequest);\n\n\npage.leaveRequest.status = page.approveOrReject.controls['option'].value;\n\nbh.input.path = 'updateLeaveRequest';\nbh.input.method = 'POST';\nbh.input.body = page.leaveRequest;\n",
         "functionName": "sd_upQhlMdfhqz5VgPu",
         "category": "Function",
         "x": 240,
@@ -261,99 +243,6 @@
                 "sd_t2uE7K2e607GlqLn"
             ]
         ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_yqnDnjma0kGd8uEL",
-        "type": "GetDialogData",
-        "z": "sd_VENuDC99MMwEMfCo",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "dialogDataMapping": "this.page.data",
-        "functionName": "sd_yqnDnjma0kGd8uEL",
-        "category": "Dialog",
-        "x": 245,
-        "y": 360,
-        "wires": [
-            [
-                "sd_56aWPMHfhQcmNzwQ"
-            ]
-        ],
-        "__ssdTypeInputs__": {
-            "dialogDataMapping": {
-                "type": "this.page",
-                "value": "data",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_krteHdpKkVOhQV8c",
-        "type": "PageCallService",
-        "z": "sd_VENuDC99MMwEMfCo",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_VENuDC99MMwEMfCo",
-            "type": "tab",
-            "createdDate": "2022-07-25T15:35:19.829Z",
-            "label": "dialog_box_details",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0
-        },
-        "flow": {
-            "flowId": "sd_9VE1vBoD2eygLtRW",
-            "flowName": "getData"
-        },
-        "inputVariables": [],
-        "outputMapping": [],
-        "serviceImportPath": "./dialog_box_details",
-        "startName": "getData",
-        "inputParams": [],
-        "accept_csd": false,
-        "functionName": "sd_krteHdpKkVOhQV8c",
-        "category": "General",
-        "x": 525,
-        "y": 220,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_56aWPMHfhQcmNzwQ",
-        "type": "Log",
-        "z": "sd_VENuDC99MMwEMfCo",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "this.page",
-        "functionName": "sd_56aWPMHfhQcmNzwQ",
-        "category": "General",
-        "x": 380,
-        "y": 360,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            }
-        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true
@@ -452,6 +341,32 @@
             "data": {
                 "type": "str",
                 "value": "done",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ejJA1OKXIvdxyGZR",
+        "type": "GetDialogData",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "dialogDataMapping": "this.page.leaveRequest",
+        "functionName": "sd_ejJA1OKXIvdxyGZR",
+        "category": "Dialog",
+        "x": 525,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "dialogDataMapping": {
+                "type": "this.page",
+                "value": "leaveRequest",
                 "constant": false
             }
         },
