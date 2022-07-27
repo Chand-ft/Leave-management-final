@@ -215,7 +215,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.system.oauthService.login(\"Home\");",
+        "script": "bh.system.oauthService.login(\"home/admin/dashboard\");",
         "functionName": "sd_1N3fSpp8CHKql55x",
         "category": "Function",
         "x": 260,

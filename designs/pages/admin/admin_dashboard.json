@@ -120,6 +120,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "leaveList",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
             }
         ],
         "functionName": "sd_PO0kvmKE2DOhU2RB",
@@ -142,7 +149,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.isEmployee = page.userMongo[0].role !== 'Line Manager' ? true : false;\npage.dataInfoBoxes = [{\n\t\"number\": 7,\n\t\"text\": \"Total Staff\",\n\t\"icon\": \"person\",\n\t\"colour\": \"white\"\n\n},\n{\n\t\"number\": 3,\n\t\"text\": \"Approved Leave\",\n\t\"icon\": \"thumb_up\",\n\t\"colour\": \"green\"\n},\n{\n\t\"number\": 1,\n\t\"text\": \"Pending leave\",\n\t\"icon\": \"hourglass_empty\",\n\t\"colour\": \"yellow\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Rejected leave\",\n\t\"icon\": \"thumb_down\",\n\t\"colour\": \"red\"\n\n}]\n\nconsole.log(this)",
+        "script": "page.isEmployee = page.userMongo[0].role !== 'Line Manager' ? true : false;\npage.dataInfoBoxes = [{\n\t\"number\": 0,\n\t\"text\": \"Total Staff\",\n\t\"icon\": \"person\",\n\t\"colour\": \"white\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Approved Leave\",\n\t\"icon\": \"thumb_up\",\n\t\"colour\": \"green\"\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Pending leave\",\n\t\"icon\": \"hourglass_empty\",\n\t\"colour\": \"yellow\"\n\n},\n{\n\t\"number\": 0,\n\t\"text\": \"Rejected leave\",\n\t\"icon\": \"thumb_down\",\n\t\"colour\": \"red\"\n\n}]\n\npage.dataInfoBoxes[0]['number'] = page.staff.length\n",
         "functionName": "sd_4487OH8YGCGYG6Kv",
         "category": "Function",
         "x": 425,
@@ -367,7 +374,236 @@
         "x": 645,
         "y": 300,
         "wires": [
+            [
+                "sd_ltgR6lLgPUC43KRl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_g4IEwyxKMUIhXv5t",
+        "type": "PageStart",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "fetchLeave",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "fetchLeave",
+        "category": "General",
+        "x": 90,
+        "y": 456.8125,
+        "wires": [
+            [
+                "sd_ynVXnGDCvzhzn9wF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "admin_dashboardComponent"
+    },
+    {
+        "id": "sd_ynVXnGDCvzhzn9wF",
+        "type": "Script",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.path = 'getAllLeaveRequests';\nbh.input.method = 'POST';\nbh.input.body = {\n};\n\nconsole.log('lol',bh.input)",
+        "functionName": "sd_ynVXnGDCvzhzn9wF",
+        "category": "Function",
+        "x": 230,
+        "y": 456.8125,
+        "wires": [
+            [
+                "sd_zqyPnJ9OVlRyaN8s"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_zqyPnJ9OVlRyaN8s",
+        "type": "PageCallService",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_MSma9GJuXg98ZzJs",
+            "type": "tab",
+            "createdDate": "2022-07-25T20:55:29.182Z",
+            "label": "client_service",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_e3SpyZ5sB2xLCtH4",
+            "flowName": "dynamicApiCall"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "path"
+            },
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "results",
+                "valueType": "this.page",
+                "value": "leaveList",
+                "mapVarName": "results",
+                "localVar": "this.page.leaveList"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/client_service",
+        "startName": "dynamicApiCall",
+        "inputParams": [
+            "bh.input.path",
+            "bh.input.body",
+            "bh.input.method"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_zqyPnJ9OVlRyaN8s",
+        "category": "General",
+        "x": 355,
+        "y": 456.8125,
+        "wires": [
+            [
+                "sd_SpAUgZVBXxHBjxUy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_FTJLrNCJWHCwzSDs",
+        "type": "Log",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.leaveList",
+        "functionName": "sd_FTJLrNCJWHCwzSDs",
+        "category": "General",
+        "x": 605,
+        "y": 460,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "leaveList",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_SpAUgZVBXxHBjxUy",
+        "type": "Script",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\n\nfor (var i = 0; i < page.leaveList.length; i++){\n    page.leaveList[i].startDate = transformDate(page.leaveList[i].startDate)\n    page.leaveList[i].endDate =  transformDate(page.leaveList[i].endDate)\n    console.log(page.leaveList[i])\n}\n\nfunction transformDate(date){\n date = Date.parse(date);\n date = new Date(date);\n date = date.toLocaleDateString(\"en-US\", options);\n\n return date\n}",
+        "functionName": "sd_SpAUgZVBXxHBjxUy",
+        "category": "Function",
+        "x": 430,
+        "y": 456.8125,
+        "wires": [
+            [
+                "sd_D6fJHcmDvMqsCAsQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ltgR6lLgPUC43KRl",
+        "type": "PageCallService",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_XtPpSSadUQmuXKXR",
+            "type": "tab",
+            "createdDate": "2022-07-24T07:10:16.971Z",
+            "label": "admin_dashboard",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_g4IEwyxKMUIhXv5t",
+            "flowName": "fetchLeave"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./admin_dashboard",
+        "startName": "fetchLeave",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_ltgR6lLgPUC43KRl",
+        "category": "General",
+        "x": 740,
+        "y": 300,
+        "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_D6fJHcmDvMqsCAsQ",
+        "type": "Script",
+        "z": "sd_XtPpSSadUQmuXKXR",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.leaveList.forEach(elem =>{\n    switch(elem['status']){\n\n        case 'Pending':\n            page.dataInfoBoxes[2]['number'] += 1;\n            break\n        case 'Approved':\n            page.dataInfoBoxes[1]['number'] += 1;\n            break\n        case 'Rejected':\n            page.dataInfoBoxes[3]['number'] += 1;\n            break\n        \n    }\n})",
+        "functionName": "sd_D6fJHcmDvMqsCAsQ",
+        "category": "Function",
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "sd_FTJLrNCJWHCwzSDs"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

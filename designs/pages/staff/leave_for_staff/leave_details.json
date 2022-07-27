@@ -40,17 +40,35 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "leaveOwner",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_TMNYHUroK496qQ7S",
         "category": "Function",
         "x": 335,
         "y": 100,
         "wires": [
-            []
+            [
+                "sd_ZJLM8x942mq60lIa"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "leave_detailsComponent"
     },
     {
         "id": "sd_OxorjoDqoqIfxR4m",
@@ -227,6 +245,280 @@
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_EdQXr2WFRro77wJG",
+        "type": "PageStart",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "fetchUserInfo",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "fetchUserInfo",
+        "category": "General",
+        "x": 65,
+        "y": 320,
+        "wires": [
+            [
+                "sd_2TidGxyawGQ7BHKX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "leave_detailsComponent"
+    },
+    {
+        "id": "sd_QWS4DDews1Xcaabu",
+        "type": "Script",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.path = 'login'\nbh.input.body = {\n    email: page.leaveOwner\n}\nbh.input.method = 'POST'\n\nconsole.log('owner',page)",
+        "functionName": "sd_QWS4DDews1Xcaabu",
+        "category": "Function",
+        "x": 265,
+        "y": 320,
+        "wires": [
+            [
+                "sd_T9w5gzijNLCfOAv1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_T9w5gzijNLCfOAv1",
+        "type": "PageCallService",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_MSma9GJuXg98ZzJs",
+            "type": "tab",
+            "createdDate": "2022-07-25T20:55:29.182Z",
+            "label": "client_service",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_e3SpyZ5sB2xLCtH4",
+            "flowName": "dynamicApiCall"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "path"
+            },
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "results",
+                "valueType": "this.page",
+                "value": "user",
+                "mapVarName": "results",
+                "localVar": "this.page.user"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/client_service",
+        "startName": "dynamicApiCall",
+        "inputParams": [
+            "bh.input.path",
+            "bh.input.body",
+            "bh.input.method"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_T9w5gzijNLCfOAv1",
+        "category": "General",
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "sd_SRlIKiFKKeIz2Avt",
+                "sd_ZKFSudcnjteEOa9K"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_SRlIKiFKKeIz2Avt",
+        "type": "Log",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page",
+        "functionName": "sd_SRlIKiFKKeIz2Avt",
+        "category": "General",
+        "x": 525,
+        "y": 400,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZKFSudcnjteEOa9K",
+        "type": "PageServiceVariables",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user[0]"
+                }
+            }
+        ],
+        "functionName": "sd_ZKFSudcnjteEOa9K",
+        "service": {
+            "id": "sd_MSma9GJuXg98ZzJs",
+            "type": "tab",
+            "createdDate": "2022-07-25T20:55:29.182Z",
+            "label": "client_service",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "generateNext": true,
+            "serviceName": "client_service",
+            "relativeParentPath": "",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/client_service",
+        "category": "Function",
+        "x": 525,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZJLM8x942mq60lIa",
+        "type": "PageCallService",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_lB9aDAccWR3bfu5v",
+            "type": "tab",
+            "createdDate": "2022-07-24T18:02:49.490Z",
+            "label": "leave_details",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_EdQXr2WFRro77wJG",
+            "flowName": "fetchUserInfo"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./leave_details",
+        "startName": "fetchUserInfo",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_ZJLM8x942mq60lIa",
+        "category": "General",
+        "x": 460,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_2TidGxyawGQ7BHKX",
+        "type": "Storage",
+        "z": "sd_lB9aDAccWR3bfu5v",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "leaveOwner"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "leaveOwner"
+        },
+        "functionName": "sd_2TidGxyawGQ7BHKX",
+        "category": "Storage",
+        "x": 165,
+        "y": 320,
+        "wires": [
+            [
+                "sd_QWS4DDews1Xcaabu"
+            ]
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true

@@ -645,142 +645,6 @@
                     ]
                 }
             },
-            "a3cef1e4-f640-74f8-0cef-539f2cf5e22c": {
-                "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "81db29c4-04e6-a6a0-f4ab-bc85baeb7a2b",
-                "commentid": null,
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Row",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": "",
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxFlex",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxLayoutGap",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "wrap",
-                        "_value": "wrap",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "layoutAlign",
-                        "_value": "center",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "pLayoutAlign",
-                        "_value": "stretch",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxShow]",
-                        "_value": "true",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ],
-                "0d872002-6c12-464e-f5d6-2dd9b8ac712b": {
-                    "paletteKey": "NG-TextArea",
-                    "parentEditorKey": "a3cef1e4-f640-74f8-0cef-539f2cf5e22c",
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "dav",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "placeholder",
-                            "_value": "Notes",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
-                        },
-                        {
-                            "_key": "value",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[required]",
-                            "_value": "false",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[appearance]",
-                            "_value": "'outline'",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[(ngModel)]",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "color",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "name",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[readonly]",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[disabled]",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ]
-                }
-            },
             "f4243271-0464-5a88-504d-7b691b8f8f8b": {
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "81db29c4-04e6-a6a0-f4ab-bc85baeb7a2b",
@@ -845,7 +709,6 @@
                 "f2a37bac-1157-90a7-f07b-d1454cf40075": {
                     "paletteKey": "FlexLayoutCol",
                     "parentEditorKey": "f4243271-0464-5a88-504d-7b691b8f8f8b",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -907,7 +770,6 @@
                     "26dd7896-cfb7-97b7-7e27-81d0d047e010": {
                         "paletteKey": "NG-button",
                         "parentEditorKey": "f2a37bac-1157-90a7-f07b-d1454cf40075",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -939,9 +801,16 @@
                             },
                             {
                                 "_key": "(click)",
-                                "_value": "",
+                                "_value": "submit()",
                                 "_type": "kv",
-                                "_attrDef": "p"
+                                "_attrDef": "p",
+                                "objValue": {
+                                    "nodeID": "sd_wqGfkVY5lR45Z52e",
+                                    "functionName": "submit",
+                                    "activeTree": "pages",
+                                    "z": "sd_VENuDC99MMwEMfCo",
+                                    "input": []
+                                }
                             },
                             {
                                 "_key": "[disabled]",

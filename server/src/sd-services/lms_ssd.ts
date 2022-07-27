@@ -566,6 +566,58 @@ export class lms_ssd {
         this.generatedMiddlewares
       )
     );
+
+    if (!this.swaggerDocument['paths']['/getAllLeaveRequests']) {
+      this.swaggerDocument['paths']['/getAllLeaveRequests'] = {
+        post: {
+          summary: '',
+          description: '',
+          consumes: [],
+          produces: [],
+          parameters: [],
+          responses: {},
+        },
+      };
+    } else {
+      this.swaggerDocument['paths']['/getAllLeaveRequests']['post'] = {
+        summary: '',
+        description: '',
+        consumes: [],
+        produces: [],
+        parameters: [],
+        responses: {},
+      };
+    }
+    this.app['post'](
+      `${this.serviceBasePath}/getAllLeaveRequests`,
+      cookieParser(),
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'pre',
+        this.generatedMiddlewares
+      ),
+
+      async (req, res, next) => {
+        let bh = {};
+        try {
+          bh = this.sdService.__constructDefault(
+            { local: {}, input: {} },
+            req,
+            res,
+            next
+          );
+          bh = await this.sd_tCd9ZICQaNTDi4VC(bh);
+          //appendnew_next_sd_l8AP2apZ7HVv3dct
+        } catch (e) {
+          return await this.errorHandler(bh, e, 'sd_l8AP2apZ7HVv3dct');
+        }
+      },
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'post',
+        this.generatedMiddlewares
+      )
+    );
     //appendnew_flow_lms_ssd_HttpIn
   }
   //   service flows_lms_ssd
@@ -930,7 +982,6 @@ export class lms_ssd {
         },
       };
 
-      console.log('befor mongodb', bh.input);
       bh = await this.updateLRStatus(bh);
       //appendnew_next_sd_BgJfeMQEJLBjhLP3
       return bh;
@@ -958,9 +1009,6 @@ export class lms_ssd {
 
   async sd_MJXH3Gc7KhoXWU4s(bh) {
     try {
-      console.log('response==================', bh.local);
-      //fetch leave days
-
       bh.input.filter = {
         owner: bh.input.body.owner,
       };
@@ -1007,7 +1055,6 @@ export class lms_ssd {
       function datediff(date1, date2) {
         date1 = Date.parse(date1);
         date2 = Date.parse(date2);
-        console.log('start', date1);
         // The number of milliseconds in one day
         const ONE_DAY = 1000 * 60 * 60 * 24;
 
@@ -1086,6 +1133,45 @@ export class lms_ssd {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_R1TQ3lEVE0Jyuvph');
+    }
+  }
+
+  async sd_tCd9ZICQaNTDi4VC(bh) {
+    try {
+      // Check if email matches the user OR if reporting manager is equals to user
+
+      bh.input.query = {};
+      bh = await this.sd_9dhS1NzXsfNG2wKH(bh);
+      //appendnew_next_sd_tCd9ZICQaNTDi4VC
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_tCd9ZICQaNTDi4VC');
+    }
+  }
+
+  async sd_9dhS1NzXsfNG2wKH(bh) {
+    try {
+      bh.local.result = await MongoPersistance.getInstance().find(
+        'sd_2nvaxbLqUVsRQhHb',
+        'leaveRequests',
+        bh.input.query,
+        {}
+      );
+      await this.sd_XTBvnyOAFVEdxNfY(bh);
+      //appendnew_next_sd_9dhS1NzXsfNG2wKH
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_9dhS1NzXsfNG2wKH');
+    }
+  }
+
+  async sd_XTBvnyOAFVEdxNfY(bh) {
+    try {
+      bh.web.res.status(200).send(bh.local.result);
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_XTBvnyOAFVEdxNfY');
     }
   }
 

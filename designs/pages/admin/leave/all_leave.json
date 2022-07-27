@@ -74,7 +74,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "all_leaveComponent"
     },
     {
         "id": "sd_5Bgq8WlFjlgLyPna",
@@ -106,7 +107,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "all_leaveComponent"
     },
     {
         "id": "sd_PsnKfYWFcZeOY1vP",
@@ -139,7 +141,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.input.path = 'getPendingRequests';\nbh.input.method = 'POST';\nbh.input.body = {\n    email: page.userMongo[0].email\n};\n\nconsole.log(bh.input)",
+        "script": "bh.input.path = page.isEmployee ? 'getPendingRequests' : 'getAllLeaveRequests';\nbh.input.method = 'POST';\n\nbh.input.body =  {\n    email: page.userMongo[0].email\n};\n",
         "functionName": "sd_PdOS9BbwKeRE7ZhD",
         "category": "Function",
         "x": 240,
@@ -217,38 +219,13 @@
         "accept_csd": true,
         "functionName": "sd_mVROWvgjk3A1GXdj",
         "category": "General",
-        "x": 365,
+        "x": 345,
         "y": 260,
         "wires": [
             [
                 "sd_2TNFGjiIOKA8ZVQb"
             ]
         ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_t7lpaD9G0k369l6d",
-        "type": "Log",
-        "z": "sd_fqqNMHeefqVerwOE",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "this.page.leaveList",
-        "functionName": "sd_t7lpaD9G0k369l6d",
-        "category": "General",
-        "x": 520,
-        "y": 260,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "this.page",
-                "value": "leaveList",
-                "constant": false
-            }
-        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true
@@ -303,15 +280,13 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\n\nfor (var i = 0; i < page.leaveList.length; i++){\n    page.leaveList[i].startDate = transformDate(page.leaveList[i].startDate)\n    page.leaveList[i].endDate =  transformDate(page.leaveList[i].endDate)\n    console.log(page.leaveList[i])\n}\n\nfunction transformDate(date){\n date = Date.parse(date);\n date = new Date(date);\n date = date.toLocaleDateString(\"en-US\", options);\n\n return date\n}",
+        "script": "var options = { year: 'numeric', month: 'long', day: 'numeric' };\n\nfor (var i = 0; i < page.leaveList.length; i++){\n    page.leaveList[i].startDate = transformDate(page.leaveList[i].startDate)\n    page.leaveList[i].endDate =  transformDate(page.leaveList[i].endDate)\n}\n\nfunction transformDate(date){\n    \n date = Date.parse(date);\n date = new Date(date);\n date = date.toLocaleDateString(\"en-US\", options);\n\n return date\n}",
         "functionName": "sd_2TNFGjiIOKA8ZVQb",
         "category": "Function",
         "x": 440,
         "y": 260,
         "wires": [
-            [
-                "sd_t7lpaD9G0k369l6d"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -327,11 +302,292 @@
         "script": "page.isEmployee = page.userMongo[0].role !== 'Line Manager' ? true : false;\nconsole.log('all leave',page)\n",
         "functionName": "sd_nCJ5Cqd3C8aPpjmw",
         "category": "Function",
-        "x": 520,
-        "y": 100,
+        "x": 525,
+        "y": 80,
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_WROhBYs35Bnnh1SN",
+        "type": "PageStart",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "leaveDetail",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "owner",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "tot",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "flow_type": "sync",
+        "functionName": "leaveDetail",
+        "category": "General",
+        "x": 85,
+        "y": 380,
+        "wires": [
+            [
+                "sd_AH1zkJ4CFt5RQf3c"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "all_leaveComponent"
+    },
+    {
+        "id": "sd_SgR1KUzFyJAHw2xB",
+        "type": "Navigation",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/admin/details",
+        "functionName": "sd_SgR1KUzFyJAHw2xB",
+        "category": "Navigation",
+        "x": 385,
+        "y": 380,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_AH1zkJ4CFt5RQf3c",
+        "type": "Storage",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "leaveOwner"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "owner"
+        },
+        "resultMapping": {},
+        "functionName": "sd_AH1zkJ4CFt5RQf3c",
+        "category": "Storage",
+        "x": 205,
+        "y": 380,
+        "wires": [
+            [
+                "sd_SgR1KUzFyJAHw2xB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_2u8FO3Ow5kXCQAhL",
+        "type": "PageStart",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openDialog",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "leaveDetails",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openDialog",
+        "category": "General",
+        "x": 85,
+        "y": 520,
+        "wires": [
+            [
+                "sd_D2MloTr8AnfA7Y7g"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "all_leaveComponent"
+    },
+    {
+        "id": "sd_D2MloTr8AnfA7Y7g",
+        "type": "OpenDialog",
+        "z": "sd_fqqNMHeefqVerwOE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_VENuDC99MMwEMfCo",
+            "label": "dialog_box_details"
+        },
+        "relativePath": "../../aa_base/dialog_box_details",
+        "data": "bh.input.leaveDetails",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_D2MloTr8AnfA7Y7g",
+        "category": "Dialog",
+        "x": 220,
+        "y": 520,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "bh.input",
+                "value": "leaveDetails",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true

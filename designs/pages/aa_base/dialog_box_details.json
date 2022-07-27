@@ -61,6 +61,20 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "data",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "leaveList",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_BuYHc2lqz8yoPEoP",
@@ -74,7 +88,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "dialog_box_detailsComponent"
     },
     {
         "id": "sd_QYEA2HFrFTh03Abs",
@@ -104,13 +119,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.approveOrRejectOptions = [\n        {option: 'Approve'},\n        {option: 'Reject'},\n     ];",
+        "script": "page.approveOrRejectOptions = [\n        {option: 'Approved'},\n        {option: 'Reject'},\n     ];",
         "functionName": "sd_xNkOv97YCML0LCkg",
         "category": "Function",
         "x": 448,
         "y": 220,
         "wires": [
-            []
+            [
+                "sd_krteHdpKkVOhQV8c"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -185,18 +202,18 @@
         "z": "sd_VENuDC99MMwEMfCo",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "closeDialog",
+        "name": "getData",
         "outputs": 1,
         "inputVariables": [],
         "localVariables": [],
         "flow_type": "sync",
-        "functionName": "closeDialog",
+        "functionName": "getData",
         "category": "General",
-        "x": 145,
-        "y": 320,
+        "x": 125,
+        "y": 360,
         "wires": [
             [
-                "sd_3MmqxfdtNQx5vmh2"
+                "sd_yqnDnjma0kGd8uEL"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -204,24 +221,237 @@
         "serviceName": "dialog_box_detailsComponent"
     },
     {
-        "id": "sd_3MmqxfdtNQx5vmh2",
+        "id": "sd_wqGfkVY5lR45Z52e",
+        "type": "PageStart",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submit",
+        "category": "General",
+        "x": 125,
+        "y": 520,
+        "wires": [
+            [
+                "sd_upQhlMdfhqz5VgPu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dialog_box_detailsComponent"
+    },
+    {
+        "id": "sd_upQhlMdfhqz5VgPu",
+        "type": "Script",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.data.status = page.approveOrReject.controls['option'].value;\n\nbh.input.path = 'updateLeaveRequest';\nbh.input.method = 'POST';\nbh.input.body = page.data;\n",
+        "functionName": "sd_upQhlMdfhqz5VgPu",
+        "category": "Function",
+        "x": 240,
+        "y": 520,
+        "wires": [
+            [
+                "sd_t2uE7K2e607GlqLn"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_yqnDnjma0kGd8uEL",
+        "type": "GetDialogData",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "dialogDataMapping": "this.page.data",
+        "functionName": "sd_yqnDnjma0kGd8uEL",
+        "category": "Dialog",
+        "x": 245,
+        "y": 360,
+        "wires": [
+            [
+                "sd_56aWPMHfhQcmNzwQ"
+            ]
+        ],
+        "__ssdTypeInputs__": {
+            "dialogDataMapping": {
+                "type": "this.page",
+                "value": "data",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_krteHdpKkVOhQV8c",
+        "type": "PageCallService",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_VENuDC99MMwEMfCo",
+            "type": "tab",
+            "createdDate": "2022-07-25T15:35:19.829Z",
+            "label": "dialog_box_details",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_9VE1vBoD2eygLtRW",
+            "flowName": "getData"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./dialog_box_details",
+        "startName": "getData",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_krteHdpKkVOhQV8c",
+        "category": "General",
+        "x": 525,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_56aWPMHfhQcmNzwQ",
+        "type": "Log",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page",
+        "functionName": "sd_56aWPMHfhQcmNzwQ",
+        "category": "General",
+        "x": 380,
+        "y": 360,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_t2uE7K2e607GlqLn",
+        "type": "PageCallService",
+        "z": "sd_VENuDC99MMwEMfCo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_MSma9GJuXg98ZzJs",
+            "type": "tab",
+            "createdDate": "2022-07-25T20:55:29.182Z",
+            "label": "client_service",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_e3SpyZ5sB2xLCtH4",
+            "flowName": "dynamicApiCall"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "path"
+            },
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "results",
+                "valueType": "this.page",
+                "value": "leaveList",
+                "mapVarName": "results",
+                "localVar": "this.page.leaveList"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/client_service",
+        "startName": "dynamicApiCall",
+        "inputParams": [
+            "bh.input.path",
+            "bh.input.body",
+            "bh.input.method"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_t2uE7K2e607GlqLn",
+        "category": "General",
+        "x": 365,
+        "y": 520,
+        "wires": [
+            [
+                "sd_bmwl6YVktWHMUig9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_bmwl6YVktWHMUig9",
         "type": "CloseDialog",
         "z": "sd_VENuDC99MMwEMfCo",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "data": "this.page.dialog",
-        "functionName": "sd_3MmqxfdtNQx5vmh2",
+        "data": "\"done\"",
+        "functionName": "sd_bmwl6YVktWHMUig9",
         "category": "Dialog",
-        "x": 235.171875,
-        "y": 320.03125,
+        "x": 500,
+        "y": 520,
         "wires": [
             []
         ],
         "__ssdTypeInputs__": {
             "data": {
-                "type": "this.page",
-                "value": "dialog",
+                "type": "str",
+                "value": "done",
                 "constant": false
             }
         },
