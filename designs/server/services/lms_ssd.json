@@ -194,7 +194,6 @@
             "obj": "{message: 'User successfully added', status: 200}",
             "send": "{message: 'User successfully added', status: 200}"
         },
-        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -357,7 +356,6 @@
             "obj": "{message: 'User already exists'}",
             "send": "{message: 'User already exists'}"
         },
-        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -407,7 +405,6 @@
                 }
             }
         },
-        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -600,7 +597,6 @@
             "obj": "{message: 'User not found!'}",
             "send": "{message: 'User not found!'}"
         },
-        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -644,7 +640,6 @@
             "obj": "bh.local.foundUser",
             "send": "bh.local.foundUser"
         },
-        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -693,6 +688,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -872,6 +868,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -1432,6 +1429,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -1562,6 +1560,7 @@
             "obj": "bh.local.result",
             "send": "bh.local.result"
         },
+        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -1631,6 +1630,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -1799,7 +1799,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.input.filter = {\n    owner: bh.input.body.owner,\n    textArea: bh.input.body.textArea\n}\nbh.input.updateStatus = {\n    $set: {\n         status: bh.input.body.status\n     }\n}\n\nconsole.log('hi', bh.input)\n",
+        "script": "bh.input.filter = {\n    owner: bh.input.body.owner,\n    textArea: bh.input.body.textArea\n}\nbh.input.updateStatus = {\n    $set: {\n         status: bh.input.body.status\n     }\n}\n\n// console.log('hi', bh.input)\n",
         "functionName": "sd_BgJfeMQEJLBjhLP3",
         "category": "Function",
         "x": 300,
@@ -2078,6 +2078,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],
@@ -2208,6 +2209,7 @@
             "obj": "bh.local.result",
             "send": "bh.local.result"
         },
+        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -2256,6 +2258,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [],
             "params": [],

@@ -1108,7 +1108,9 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": [
+                                "departmentWhiteBox"
+                            ],
                             "_type": "dav",
                             "_attrDef": "p"
                         },

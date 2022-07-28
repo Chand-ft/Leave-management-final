@@ -1914,7 +1914,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "Header Label",
-                                        "_value": "Email",
+                                        "_value": "Employee ID",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -2094,6 +2094,7 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "28ce609a-67cc-1c5f-5482-171de881dba7",
                                 "isAdvancedChildComponent": true,
+                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2300,7 +2301,9 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": [
+                                                    "pointerCursor"
+                                                ],
                                                 "_type": "dav",
                                                 "_attrDef": "p"
                                             },
@@ -2355,7 +2358,9 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": [
+                                                    "pointerCursor"
+                                                ],
                                                 "_type": "dav",
                                                 "_attrDef": "p"
                                             },

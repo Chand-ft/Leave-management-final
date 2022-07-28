@@ -112,6 +112,8 @@
         "greenStatus",
         "redStatus",
         "loginText",
-        "loginButton"
+        "loginButton",
+        "profileBottomBorder",
+        "profileGreyText"
     ]
 }

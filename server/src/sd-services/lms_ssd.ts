@@ -982,7 +982,7 @@ export class lms_ssd {
         },
       };
 
-      console.log('hi', bh.input);
+      // console.log('hi', bh.input)
 
       bh = await this.updateLRStatus(bh);
       //appendnew_next_sd_BgJfeMQEJLBjhLP3

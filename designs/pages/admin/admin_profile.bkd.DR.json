@@ -1108,13 +1108,15 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": [
+                                "loginWhiteBox"
+                            ],
                             "_type": "dav",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "fxFlex",
-                            "_value": "50",
+                            "_value": "45",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1170,6 +1172,7 @@
                             {
                                 "_key": "class",
                                 "_value": [
+                                    "profileBottomBorder",
                                     "fullWidth"
                                 ],
                                 "_type": "dav",
@@ -1480,7 +1483,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<p>user.name</p>",
+                                            "_value": "<p style=\"font-size: 20px;text-align: center;\">name</p>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -1501,7 +1504,9 @@
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": "",
+                                        "_value": [
+                                            "marginBottom20"
+                                        ],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     },
@@ -1694,7 +1699,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<p>user.role</p>",
+                                            "_value": "<p style=\"color: grey; font-size: 16px; text-align: center;\">role</p>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -1799,7 +1804,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": "15px",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2161,7 +2166,7 @@
                                                 },
                                                 {
                                                     "_key": "html",
-                                                    "_value": "<p class=\"staffPortalText\">Email address:</p>\n",
+                                                    "_value": "<p class=\"profileGreyText\">Email address:</p>\n\n",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 }
@@ -2719,7 +2724,7 @@
                                                 },
                                                 {
                                                     "_key": "html",
-                                                    "_value": "<p class=\"staffPortalText\">Phone Number</p>\n",
+                                                    "_value": "\n<p class=\"profileGreyText\">Phone Number</p>\n",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 }
@@ -3277,7 +3282,7 @@
                                                 },
                                                 {
                                                     "_key": "html",
-                                                    "_value": "<p class=\"staffPortalText\">Role</p>\n",
+                                                    "_value": "\n<p class=\"profileGreyText\">Role</p>\n\n\n\n",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 }
@@ -3835,7 +3840,7 @@
                                                 },
                                                 {
                                                     "_key": "html",
-                                                    "_value": "<p class=\"staffPortalText\">Address</p>\n",
+                                                    "_value": "\n<p class=\"profileGreyText\">Address</p>\n\n",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 }
@@ -4083,13 +4088,15 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": [
+                                "loginWhiteBox"
+                            ],
                             "_type": "dav",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "fxFlex",
-                            "_value": "50",
+                            "_value": "45",
                             "_type": "kv",
                             "_attrDef": "p"
                         },

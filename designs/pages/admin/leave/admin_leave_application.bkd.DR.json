@@ -1697,7 +1697,7 @@
                                         "designerReference": [
                                             {
                                                 "_key": "componentLabel",
-                                                "_value": "Column",
+                                                "_value": "start date",
                                                 "_type": "kv",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -1710,13 +1710,15 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": [
+                                                    "inputContainer"
+                                                ],
                                                 "_type": "dav",
                                                 "_attrDef": "p"
                                             },
                                             {
                                                 "_key": "fxFlex",
-                                                "_value": "50",
+                                                "_value": "30",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -2190,7 +2192,7 @@
                                                 },
                                                 {
                                                     "_key": "readonly",
-                                                    "_value": "",
+                                                    "_value": "true",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2218,7 +2220,7 @@
                                         "designerReference": [
                                             {
                                                 "_key": "componentLabel",
-                                                "_value": "Column",
+                                                "_value": "end date",
                                                 "_type": "kv",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -2231,13 +2233,15 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": [
+                                                    "inputContainer"
+                                                ],
                                                 "_type": "dav",
                                                 "_attrDef": "p"
                                             },
                                             {
                                                 "_key": "fxFlex",
-                                                "_value": "50",
+                                                "_value": "30",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -2711,7 +2715,7 @@
                                                 },
                                                 {
                                                     "_key": "readonly",
-                                                    "_value": "",
+                                                    "_value": "true",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2731,79 +2735,15 @@
                                                 }
                                             ]
                                         }
-                                    }
-                                },
-                                "14f75e61-93e2-607d-de02-fb4131e278d4": {
-                                    "paletteKey": "FlexLayoutRow",
-                                    "parentEditorKey": "1371a8ed-e3a3-32c3-7fb6-ad42e40a1178",
-                                    "commentid": null,
-                                    "designerReference": [
-                                        {
-                                            "_key": "componentLabel",
-                                            "_value": "leave type",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
-                                        },
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": [
-                                                "fullWidth"
-                                            ],
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "fxFlex",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "fxLayoutGap",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "wrap",
-                                            "_value": "wrap",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "layoutAlign",
-                                            "_value": "space-between",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "pLayoutAlign",
-                                            "_value": "stretch",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[fxShow]",
-                                            "_value": "true",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        }
-                                    ],
+                                    },
                                     "30708166-d93a-743a-6096-d3c0e985cda5": {
                                         "paletteKey": "FlexLayoutCol",
-                                        "parentEditorKey": "14f75e61-93e2-607d-de02-fb4131e278d4",
+                                        "parentEditorKey": "92dc89d3-699e-61bb-c425-105face3aa1c",
                                         "commentid": null,
                                         "designerReference": [
                                             {
                                                 "_key": "componentLabel",
-                                                "_value": "Column",
+                                                "_value": "leave type",
                                                 "_type": "kv",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -2816,13 +2756,15 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": [
+                                                    "inputContainer"
+                                                ],
                                                 "_type": "dav",
                                                 "_attrDef": "p"
                                             },
                                             {
                                                 "_key": "fxFlex",
-                                                "_value": "50",
+                                                "_value": "30",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -3254,7 +3196,71 @@
                                                 }
                                             ]
                                         }
-                                    },
+                                    }
+                                },
+                                "14f75e61-93e2-607d-de02-fb4131e278d4": {
+                                    "paletteKey": "FlexLayoutRow",
+                                    "parentEditorKey": "1371a8ed-e3a3-32c3-7fb6-ad42e40a1178",
+                                    "commentid": null,
+                                    "designerReference": [
+                                        {
+                                            "_key": "componentLabel",
+                                            "_value": "leave type",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": [
+                                                "fullWidth"
+                                            ],
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxFlex",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxLayoutGap",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "wrap",
+                                            "_value": "wrap",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "layoutAlign",
+                                            "_value": "space-between",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "pLayoutAlign",
+                                            "_value": "stretch",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[fxShow]",
+                                            "_value": "true",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        }
+                                    ],
                                     "a4e70c54-5b55-df05-ceaa-91de8f3241b3": {
                                         "paletteKey": "FlexLayoutCol",
                                         "parentEditorKey": "14f75e61-93e2-607d-de02-fb4131e278d4",
@@ -3262,7 +3268,7 @@
                                         "designerReference": [
                                             {
                                                 "_key": "componentLabel",
-                                                "_value": "Column",
+                                                "_value": "notes",
                                                 "_type": "kv",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -3283,7 +3289,7 @@
                                             },
                                             {
                                                 "_key": "fxFlex",
-                                                "_value": "50",
+                                                "_value": "30",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -3707,6 +3713,139 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    "050153b7-8f20-e868-8cf3-6d2518985e45": {
+                                        "paletteKey": "FlexLayoutCol",
+                                        "parentEditorKey": "14f75e61-93e2-607d-de02-fb4131e278d4",
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "componentLabel",
+                                                "_value": "Column",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": [],
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "fxFlex",
+                                                "_value": "70",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "fxLayoutGap",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "wrap",
+                                                "_value": "wrap",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "layoutAlign",
+                                                "_value": "end",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "pLayoutAlign",
+                                                "_value": "center",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[fxShow]",
+                                                "_value": "true",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ],
+                                        "3f648a29-36fc-341e-f42d-162da5bcd5bc": {
+                                            "paletteKey": "NG-button",
+                                            "parentEditorKey": "050153b7-8f20-e868-8cf3-6d2518985e45",
+                                            "commentid": null,
+                                            "designerReference": [
+                                                {
+                                                    "_key": "style",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "class",
+                                                    "_value": [
+                                                        "staffPortalSubmitButton"
+                                                    ],
+                                                    "_type": "dav",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "buttonname",
+                                                    "_value": "Apply for leave",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_useAsLabel": true
+                                                },
+                                                {
+                                                    "_key": "color",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(click)",
+                                                    "_value": "saveLeave()",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p",
+                                                    "objValue": {
+                                                        "nodeID": "sd_RM842Ut9oUgt9ySf",
+                                                        "functionName": "saveLeave",
+                                                        "activeTree": "pages",
+                                                        "z": "sd_1uk1r26OWdqK9aUm",
+                                                        "input": []
+                                                    }
+                                                },
+                                                {
+                                                    "_key": "[disabled]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disableRipple]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "type",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "routerLink",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                }
+                                            ]
+                                        }
                                     }
                                 },
                                 "bf15b1c1-1340-0aac-bc1a-6ca575027f09": {
@@ -3775,7 +3914,8 @@
                                     "e1e020e2-499a-e152-6499-6e01bc0ae339": {
                                         "paletteKey": "FlexLayoutCol",
                                         "parentEditorKey": "bf15b1c1-1340-0aac-bc1a-6ca575027f09",
-                                        "commentid": null,
+                                        "isCommented": "true",
+                                        "commentid": "1658930258400",
                                         "designerReference": [
                                             {
                                                 "_key": "componentLabel",
@@ -3798,7 +3938,7 @@
                                             },
                                             {
                                                 "_key": "fxFlex",
-                                                "_value": "30",
+                                                "_value": "70",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -3822,7 +3962,7 @@
                                             },
                                             {
                                                 "_key": "pLayoutAlign",
-                                                "_value": "start",
+                                                "_value": "center",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -3836,7 +3976,8 @@
                                         "0fd8ba4c-c2d5-fd01-b6f2-d5c72aff7193": {
                                             "paletteKey": "NG-button",
                                             "parentEditorKey": "e1e020e2-499a-e152-6499-6e01bc0ae339",
-                                            "commentid": null,
+                                            "isCommented": "true",
+                                            "commentid": "1658930258400",
                                             "designerReference": [
                                                 {
                                                     "_key": "style",

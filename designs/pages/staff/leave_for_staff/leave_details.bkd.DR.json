@@ -5729,11 +5729,12 @@
                                 "701d4aae-f566-9820-4b62-fb037a18afd2": {
                                     "paletteKey": "FlexLayoutCol",
                                     "parentEditorKey": "021f20e2-806e-58c8-6e19-9e96aaef643f",
-                                    "commentid": null,
+                                    "isCommented": "true",
+                                    "commentid": "1658929243705",
                                     "designerReference": [
                                         {
                                             "_key": "componentLabel",
-                                            "_value": "Column",
+                                            "_value": "leave period",
                                             "_type": "kv",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -5793,7 +5794,8 @@
                                         "paletteKey": "Html5",
                                         "parentEditorKey": "701d4aae-f566-9820-4b62-fb037a18afd2",
                                         "isAdvancedComponent": true,
-                                        "commentid": null,
+                                        "isCommented": "true",
+                                        "commentid": "1658929243705",
                                         "designerReference": [
                                             {
                                                 "_key": "style",
@@ -5980,7 +5982,8 @@
                                             "paletteKey": "html-editor",
                                             "parentEditorKey": "8396a4c9-7e83-707d-a78a-b753423092c1",
                                             "isAdvancedChildComponent": true,
-                                            "commentid": null,
+                                            "isCommented": "true",
+                                            "commentid": "1658929243705",
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
@@ -6007,7 +6010,8 @@
                                         "paletteKey": "Html5",
                                         "parentEditorKey": "701d4aae-f566-9820-4b62-fb037a18afd2",
                                         "isAdvancedComponent": true,
-                                        "commentid": null,
+                                        "isCommented": "true",
+                                        "commentid": "1658929243705",
                                         "designerReference": [
                                             {
                                                 "_key": "style",
@@ -6196,7 +6200,8 @@
                                             "paletteKey": "html-editor",
                                             "parentEditorKey": "afaf86e2-97d3-76f1-d958-d8f40eaa3cd5",
                                             "isAdvancedChildComponent": true,
-                                            "commentid": null,
+                                            "isCommented": "true",
+                                            "commentid": "1658929243705",
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
@@ -7982,7 +7987,7 @@
                                             },
                                             {
                                                 "_key": "buttonname",
-                                                "_value": "Take Action",
+                                                "_value": "Back",
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -7995,16 +8000,9 @@
                                             },
                                             {
                                                 "_key": "(click)",
-                                                "_value": "openDialog()",
+                                                "_value": "",
                                                 "_type": "kv",
-                                                "_attrDef": "p",
-                                                "objValue": {
-                                                    "nodeID": "sd_OxorjoDqoqIfxR4m",
-                                                    "functionName": "openDialog",
-                                                    "activeTree": "pages",
-                                                    "z": "sd_lB9aDAccWR3bfu5v",
-                                                    "input": []
-                                                }
+                                                "_attrDef": "p"
                                             },
                                             {
                                                 "_key": "[disabled]",
@@ -8026,7 +8024,7 @@
                                             },
                                             {
                                                 "_key": "routerLink",
-                                                "_value": "",
+                                                "_value": "/home/admin/all-leave",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             }
