@@ -28,7 +28,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "base_layoutComponent"
+        "serviceName": "base_layoutComponent",
+        "generated": false
     },
     {
         "id": "sd_gi4jBPIIFoTcWz0E",
@@ -85,7 +86,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "base_layoutComponent"
+        "serviceName": "base_layoutComponent",
+        "generated": false
     },
     {
         "id": "sd_ABzvYzC6Fl578sl9",
@@ -148,8 +150,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "generated": true
+        "generated": true,
+        "generateNext": false
     },
     {
         "id": "sd_kZmxlfgl3uQwNCKk",
@@ -285,7 +287,8 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": true
+        "generateNext": true,
+        "generated": false
     },
     {
         "id": "sd_zjO7pOz8ySxo3ubA",
@@ -376,7 +379,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "base_layoutComponent"
+        "serviceName": "base_layoutComponent",
+        "generated": false
     },
     {
         "id": "sd_XUyRvt7zJtUH6IZB",
@@ -595,7 +599,8 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": true
+        "generateNext": true,
+        "generated": false
     },
     {
         "id": "sd_8ezH1BnMUzWfv1ie",

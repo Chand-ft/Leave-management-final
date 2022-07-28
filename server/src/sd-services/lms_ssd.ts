@@ -1001,11 +1001,43 @@ export class lms_ssd {
         bh.input.updateStatus,
         {}
       );
-      bh = await this.sd_MJXH3Gc7KhoXWU4s(bh);
+      bh = await this.sd_vY4kCrYic72G7Mcl(bh);
       //appendnew_next_updateLRStatus
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_immIm90604CsxQBD');
+    }
+  }
+
+  async sd_vY4kCrYic72G7Mcl(bh) {
+    try {
+      let otherwiseFlag = true;
+      if (
+        this.sdService.operators['eq'](
+          bh.input.body.status,
+          'Aprroved',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = await this.sd_MJXH3Gc7KhoXWU4s(bh);
+        otherwiseFlag = false;
+      }
+      if (
+        this.sdService.operators['else'](
+          otherwiseFlag,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = await this.sd_NsAap1u98eBctIHb(bh);
+        otherwiseFlag = false;
+      }
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_vY4kCrYic72G7Mcl');
     }
   }
 
@@ -1064,7 +1096,7 @@ export class lms_ssd {
         const differenceMs = Math.abs(date1 - date2);
 
         // Convert back to days and return
-        return Math.round(differenceMs / ONE_DAY);
+        return Math.round(differenceMs / ONE_DAY) + 1;
       }
 
       //prepare mongodb obects

@@ -47,11 +47,97 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "userObjFromBaseLayout",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "system.oauthService.userInfo"
+                }
             }
         ],
         "functionName": "sd_wTzRuuQWEaYkSYJx",
         "category": "Function",
         "x": 225,
+        "y": 140,
+        "wires": [
+            [
+                "sd_eRPTOvycWGFsqyhY",
+                "sd_SKwFfKbIWI4Kc82y"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_eRPTOvycWGFsqyhY",
+        "type": "Log",
+        "z": "sd_pUnDzydVzdPS2wV0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.userObjFromBaseLayout",
+        "functionName": "sd_eRPTOvycWGFsqyhY",
+        "category": "General",
+        "x": 300,
+        "y": 60,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "userObjFromBaseLayout",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_SKwFfKbIWI4Kc82y",
+        "type": "Storage",
+        "z": "sd_pUnDzydVzdPS2wV0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userObjFromSS"
+        },
+        "functionName": "sd_SKwFfKbIWI4Kc82y",
+        "category": "Storage",
+        "x": 405,
+        "y": 140,
+        "wires": [
+            [
+                "sd_BcBm0G40qyi5bq4J"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_BcBm0G40qyi5bq4J",
+        "type": "Script",
+        "z": "sd_pUnDzydVzdPS2wV0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.userObjFromSS = page.userObjFromSS[0]",
+        "functionName": "sd_BcBm0G40qyi5bq4J",
+        "category": "Function",
+        "x": 520,
         "y": 140,
         "wires": [
             []

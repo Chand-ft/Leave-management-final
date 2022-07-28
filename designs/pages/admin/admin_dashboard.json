@@ -576,6 +576,7 @@
         "serviceImportPath": "./admin_dashboard",
         "startName": "fetchLeave",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_ltgR6lLgPUC43KRl",
         "category": "General",

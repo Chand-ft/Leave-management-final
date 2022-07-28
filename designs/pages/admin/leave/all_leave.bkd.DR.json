@@ -1607,7 +1607,7 @@
                                     },
                                     {
                                         "_key": "matSortHeaderColumn",
-                                        "_value": "mat-sort-header",
+                                        "_value": "",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -1653,7 +1653,7 @@
                                     },
                                     {
                                         "_key": "matSortHeaderColumn",
-                                        "_value": "mat-sort-header",
+                                        "_value": "",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -1946,7 +1946,9 @@
                                     },
                                     {
                                         "_key": "columnclass",
-                                        "_value": "",
+                                        "_value": [
+                                            "elipsis"
+                                        ],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     }
@@ -2012,7 +2014,7 @@
                                     },
                                     {
                                         "_key": "matSortHeaderColumn",
-                                        "_value": "mat-sort-header",
+                                        "_value": "",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -2058,7 +2060,7 @@
                                     },
                                     {
                                         "_key": "matSortHeaderColumn",
-                                        "_value": "mat-sort-header",
+                                        "_value": "",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -2094,7 +2096,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "28ce609a-67cc-1c5f-5482-171de881dba7",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2290,7 +2291,6 @@
                                     "a9b0bd7f-93ab-2e09-05b6-58e79c83b654": {
                                         "paletteKey": "NG-icon",
                                         "parentEditorKey": "9e780e79-fa1d-a9c8-1c20-5a265d54fd93",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -2347,7 +2347,6 @@
                                     "6276e2c9-c821-191f-85fb-fd601cae367c": {
                                         "paletteKey": "NG-icon",
                                         "parentEditorKey": "9e780e79-fa1d-a9c8-1c20-5a265d54fd93",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {

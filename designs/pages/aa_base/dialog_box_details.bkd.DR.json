@@ -649,7 +649,7 @@
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "81db29c4-04e6-a6a0-f4ab-bc85baeb7a2b",
                 "isCommented": "true",
-                "commentid": "1658930592076",
+                "commentid": "1658983102164",
                 "designerReference": [
                     {
                         "_key": "componentLabel",
@@ -711,7 +711,7 @@
                     "paletteKey": "NG-TextArea",
                     "parentEditorKey": "661c76b1-225c-3f83-b94b-437758e3732e",
                     "isCommented": "true",
-                    "commentid": "1658930592076",
+                    "commentid": "1658983102164",
                     "designerReference": [
                         {
                             "_key": "style",
@@ -779,6 +779,12 @@
                             "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "formControlName",
+                            "_value": "text",
+                            "_type": "kv",
+                            "_attrDef": "c"
                         }
                     ]
                 }

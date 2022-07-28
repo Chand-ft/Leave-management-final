@@ -114,6 +114,9 @@
         "loginText",
         "loginButton",
         "profileBottomBorder",
-        "profileGreyText"
+        "profileGreyText",
+        "elipsis",
+        "redColor",
+        "leaveDayText"
     ]
 }

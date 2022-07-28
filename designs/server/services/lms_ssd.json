@@ -1685,7 +1685,6 @@
             "obj": "bh.local.result",
             "send": "bh.local.result"
         },
-        "cookies": [],
         "inputs": 1,
         "outputs": 0,
         "editableListData": {
@@ -1698,7 +1697,7 @@
         },
         "functionName": "sd_NsAap1u98eBctIHb",
         "category": "HTTP",
-        "x": 925,
+        "x": 1125,
         "y": 1080,
         "wires": [],
         "__n_excludedFromValidation__": {},
@@ -1747,7 +1746,7 @@
         "y": 1080,
         "wires": [
             [
-                "sd_MJXH3Gc7KhoXWU4s"
+                "sd_vY4kCrYic72G7Mcl"
             ]
         ],
         "__ssdTypeInputs__": {
@@ -1823,8 +1822,8 @@
         "script": "\nbh.input.filter = {\n    owner: bh.input.body.owner\n}\n\n",
         "functionName": "sd_MJXH3Gc7KhoXWU4s",
         "category": "Function",
-        "x": 545,
-        "y": 1080,
+        "x": 685,
+        "y": 1020,
         "wires": [
             [
                 "sd_s0V1JpPwpZ48eREX"
@@ -1871,8 +1870,8 @@
         "pipeline": "",
         "functionName": "getLDbyOwner",
         "category": "Storage",
-        "x": 665,
-        "y": 1080,
+        "x": 765,
+        "y": 1020,
         "wires": [
             [
                 "sd_hfW9a2hxOgJItRFb"
@@ -1927,11 +1926,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log('input',bh.input)\nvar leaveReq = bh.input.body;\n\nvar numberOfDays = datediff(leaveReq.startDate,leaveReq.endDate);\nconsole.log(numberOfDays)\n\nvar leaveDays = bh.local.result[0]\nleaveDays[leaveReq.leaveType] = Number(leaveDays[leaveReq.leaveType]) - numberOfDays;\n\nconsole.log(leaveDays)\n\n//differenece btwn start and end date\nfunction datediff(date1, date2) {\n    date1 = Date.parse(date1)\n    date2 = Date.parse(date2)\n    // The number of milliseconds in one day\n    const ONE_DAY = 1000 * 60 * 60 * 24;\n\n    // Calculate the difference in milliseconds\n    const differenceMs = Math.abs(date1 - date2);\n\n    // Convert back to days and return\n    return Math.round(differenceMs / ONE_DAY);\n}\n\n//prepare mongodb obects\n\nbh.input.filter = {\n    owner: bh.input.body.owner\n}\nbh.input.updateDays = {\n    $set: {\n         [leaveReq.leaveType] : leaveDays[leaveReq.leaveType]\n     }\n}",
+        "script": "console.log('input',bh.input)\nvar leaveReq = bh.input.body;\n\nvar numberOfDays = datediff(leaveReq.startDate,leaveReq.endDate);\nconsole.log(numberOfDays)\n\nvar leaveDays = bh.local.result[0]\nleaveDays[leaveReq.leaveType] = Number(leaveDays[leaveReq.leaveType]) - numberOfDays;\n\nconsole.log(leaveDays)\n\n//differenece btwn start and end date\nfunction datediff(date1, date2) {\n    date1 = Date.parse(date1)\n    date2 = Date.parse(date2)\n    // The number of milliseconds in one day\n    const ONE_DAY = 1000 * 60 * 60 * 24;\n\n    // Calculate the difference in milliseconds\n    const differenceMs = Math.abs(date1 - date2);\n\n    // Convert back to days and return\n    return Math.round(differenceMs / ONE_DAY) + 1;\n}\n\n//prepare mongodb obects\n\nbh.input.filter = {\n    owner: bh.input.body.owner\n}\nbh.input.updateDays = {\n    $set: {\n         [leaveReq.leaveType] : leaveDays[leaveReq.leaveType]\n     }\n}",
         "functionName": "sd_hfW9a2hxOgJItRFb",
         "category": "Function",
-        "x": 780,
-        "y": 1080,
+        "x": 880,
+        "y": 1020,
         "wires": [
             [
                 "sd_rxTuovZkQw2xb0L8"
@@ -1979,8 +1978,8 @@
         "pipeline": "",
         "functionName": "updateLeaveTypeNumber",
         "category": "Storage",
-        "x": 865,
-        "y": 1080,
+        "x": 965,
+        "y": 1020,
         "wires": [
             [
                 "sd_NsAap1u98eBctIHb"
@@ -2424,6 +2423,46 @@
         "wires": [
             [
                 "sd_9dhS1NzXsfNG2wKH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_vY4kCrYic72G7Mcl",
+        "type": "Switch",
+        "z": "SSD_SERVICE_ID_sd_4cFJ3eVsLq4MtK2U",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "body.status",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.body.status",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Aprroved",
+                "vt": "str",
+                "gv": "\"Aprroved\""
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_vY4kCrYic72G7Mcl",
+        "category": "Function",
+        "x": 545,
+        "y": 1080,
+        "wires": [
+            [
+                "sd_MJXH3Gc7KhoXWU4s"
+            ],
+            [
+                "sd_NsAap1u98eBctIHb"
             ]
         ],
         "__n_excludedFromValidation__": {},

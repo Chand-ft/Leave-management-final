@@ -1483,7 +1483,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<p style=\"font-size: 20px;text-align: center;\">name</p>",
+                                            "_value": "<p style=\"font-size: 20px;text-align: center;\">{{page.userObjFromBaseLayout.displayName}}</p>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -3498,7 +3498,7 @@
                                                 },
                                                 {
                                                     "_key": "html",
-                                                    "_value": "<p class=\"staffPortalText\">xxxx</p>\n",
+                                                    "_value": "<p class=\"staffPortalText\">{{page.userObjFromSS.role}}</p>\n",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 }
