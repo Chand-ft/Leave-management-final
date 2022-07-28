@@ -61,6 +61,27 @@
                     "type": "literal",
                     "value": "false"
                 }
+            },
+            {
+                "textIp": "isPending",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
+            },
+            {
+                "textIp": "isRejected",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
+            },
+            {
+                "textIp": "isApproved",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
             }
         ],
         "functionName": "sd_jBehYYQu9Etu5LJD",
@@ -360,13 +381,6 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/admin/details",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
         "functionName": "sd_SgR1KUzFyJAHw2xB",
         "category": "Navigation",
         "x": 445,
@@ -605,7 +619,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "let tempData = page.leaveList.filter(item => item['_id'] === bh.input.id);\nbh.leaveData = tempData.length > 0 ? tempData[0] : [];",
+        "script": "let tempData = page.leaveList.filter(item => item['_id'] === bh.input.id);\nbh.leaveData = tempData.length > 0 ? tempData[0] : [];\n\n\nif(page.leaveList.status = \"Pending\"){\n    page.isPending = true\n};\nif(page.leaveList.status = \"Rejected\"){\n    page.isRejected = true\n};\nif(page.leaveList.status = \"Approved\"){\n    page.isApproved = true\n};",
         "functionName": "sd_Zq9iUZMSYAR5eRAx",
         "category": "Function",
         "x": 185,

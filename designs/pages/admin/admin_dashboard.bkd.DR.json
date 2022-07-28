@@ -2845,6 +2845,7 @@
                     {
                         "_key": "class",
                         "_value": [
+                            "marginBottom50",
                             "marginTop20",
                             "fullWidth"
                         ],
@@ -3101,7 +3102,9 @@
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": [],
+                                        "_value": [
+                                            "marginTop30"
+                                        ],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     },

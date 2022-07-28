@@ -117,6 +117,8 @@
         "profileGreyText",
         "elipsis",
         "redColor",
-        "leaveDayText"
+        "leaveDayText",
+        "orangeColor",
+        "lightBlueColor"
     ]
 }

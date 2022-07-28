@@ -383,7 +383,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Success"
+            "value": "Status Updated"
         },
         "action": {
             "type": "str",
