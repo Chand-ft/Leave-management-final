@@ -233,7 +233,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// console.log('mango', page.leaveRequest);\n\n\npage.leaveRequest.status = page.approveOrReject.controls['option'].value;\n\nbh.input.path = 'updateLeaveRequest';\nbh.input.method = 'POST';\nbh.input.body = page.leaveRequest;\n",
+        "script": "console.log('mango', page.leaveRequest);\n\n\npage.leaveRequest.status = page.approveOrReject.controls['option'].value;\n\nbh.input.path = 'updateLeaveRequest';\nbh.input.method = 'POST';\nbh.input.body = page.leaveRequest;\n",
         "functionName": "sd_upQhlMdfhqz5VgPu",
         "category": "Function",
         "x": 240,

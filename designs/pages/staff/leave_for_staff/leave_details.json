@@ -487,6 +487,7 @@
         "serviceImportPath": "./leave_details",
         "startName": "fetchUserInfo",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_ZJLM8x942mq60lIa",
         "category": "General",

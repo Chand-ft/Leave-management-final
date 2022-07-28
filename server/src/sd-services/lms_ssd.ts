@@ -872,7 +872,6 @@ export class lms_ssd {
 
   async sd_qWihIfR9hMZaRAp5(bh) {
     try {
-      console.log(bh.input);
       bh = await this.sd_fPCHC4CVGuEU1Ke6(bh);
       //appendnew_next_sd_qWihIfR9hMZaRAp5
       return bh;
@@ -982,7 +981,7 @@ export class lms_ssd {
         },
       };
 
-      // console.log('hi', bh.input)
+      console.log('hi', bh.input);
 
       bh = await this.updateLRStatus(bh);
       //appendnew_next_sd_BgJfeMQEJLBjhLP3
@@ -1015,7 +1014,7 @@ export class lms_ssd {
       if (
         this.sdService.operators['eq'](
           bh.input.body.status,
-          'Aprroved',
+          'Approved',
           undefined,
           undefined
         )

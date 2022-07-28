@@ -415,7 +415,7 @@
         "outputs": 1,
         "category": "HTTP",
         "x": 225,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "sd_hL2RkgGoZAgh8CO7"
@@ -446,7 +446,7 @@
         "functionName": "sd_hL2RkgGoZAgh8CO7",
         "category": "Function",
         "x": 325,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "sd_wlJqh6C6efzg3JgW"
@@ -495,7 +495,7 @@
         "functionName": "checkIfUserIsRegistered",
         "category": "Storage",
         "x": 425,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "sd_ng9wwZHrNT9xoF5j"
@@ -560,7 +560,7 @@
         "functionName": "sd_ng9wwZHrNT9xoF5j",
         "category": "Function",
         "x": 525,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "sd_8iwcWuxrpZA6RoQK"
@@ -610,7 +610,7 @@
         "functionName": "userNotFound",
         "category": "HTTP",
         "x": 625,
-        "y": 320,
+        "y": 380,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -653,7 +653,7 @@
         "functionName": "sd_9XV9vd7v66uBNtJV",
         "category": "HTTP",
         "x": 625,
-        "y": 420,
+        "y": 480,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -699,7 +699,7 @@
         "outputs": 1,
         "category": "HTTP",
         "x": 225,
-        "y": 580,
+        "y": 280,
         "wires": [
             [
                 "sd_3qo5kOxOMV3nwsif"
@@ -756,8 +756,8 @@
         },
         "functionName": "sd_9gVY7F5LzchhERGV",
         "category": "HTTP",
-        "x": 445,
-        "y": 580,
+        "x": 625,
+        "y": 280,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -800,8 +800,8 @@
         "pipeline": "",
         "functionName": "sd_3qo5kOxOMV3nwsif",
         "category": "Storage",
-        "x": 305,
-        "y": 580,
+        "x": 425,
+        "y": 280,
         "wires": [
             [
                 "sd_9gVY7F5LzchhERGV"
@@ -878,8 +878,8 @@
         "inputs": 0,
         "outputs": 1,
         "category": "HTTP",
-        "x": 205,
-        "y": 700,
+        "x": 225,
+        "y": 580,
         "wires": [
             [
                 "sd_jjWVmFtS14Krgsnx"
@@ -936,8 +936,8 @@
         "pipeline": "",
         "functionName": "sd_3QkwjMIe9fv33fzZ",
         "category": "Storage",
-        "x": 405,
-        "y": 700,
+        "x": 425,
+        "y": 580,
         "wires": [
             [
                 "sd_KBnO0iQCurjKJLJy"
@@ -1012,8 +1012,8 @@
         },
         "functionName": "sd_KBnO0iQCurjKJLJy",
         "category": "HTTP",
-        "x": 525,
-        "y": 700,
+        "x": 625,
+        "y": 580,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1058,8 +1058,8 @@
         "inputs": 0,
         "outputs": 1,
         "category": "HTTP",
-        "x": 205,
-        "y": 860,
+        "x": 225,
+        "y": 740,
         "wires": [
             [
                 "sd_qWihIfR9hMZaRAp5"
@@ -1116,8 +1116,8 @@
         "pipeline": "",
         "functionName": "sd_fPCHC4CVGuEU1Ke6",
         "category": "Storage",
-        "x": 345,
-        "y": 860,
+        "x": 425,
+        "y": 740,
         "wires": [
             [
                 "sd_RkongtXPiseyiOBN"
@@ -1192,8 +1192,8 @@
         },
         "functionName": "sd_RkongtXPiseyiOBN",
         "category": "HTTP",
-        "x": 445,
-        "y": 860,
+        "x": 625,
+        "y": 740,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1238,8 +1238,8 @@
         "inputs": 0,
         "outputs": 1,
         "category": "HTTP",
-        "x": 305,
-        "y": 940,
+        "x": 225,
+        "y": 840,
         "wires": [
             [
                 "sd_6ctnNu5rO0Aq7wAd"
@@ -1296,8 +1296,8 @@
         "pipeline": "",
         "functionName": "sd_6ctnNu5rO0Aq7wAd",
         "category": "Storage",
-        "x": 405,
-        "y": 940,
+        "x": 425,
+        "y": 840,
         "wires": [
             [
                 "sd_oeXTXx0YaUaEw4vI"
@@ -1372,8 +1372,8 @@
         },
         "functionName": "sd_oeXTXx0YaUaEw4vI",
         "category": "HTTP",
-        "x": 525,
-        "y": 940,
+        "x": 625,
+        "y": 840,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1389,8 +1389,8 @@
         "script": "// Check if email matches the user OR if reporting manager is equals to user\nconsole.log(7777777,bh)\nbh.input.query = { reportingManager: bh.input.body.email };",
         "functionName": "sd_jjWVmFtS14Krgsnx",
         "category": "Function",
-        "x": 305,
-        "y": 700,
+        "x": 325,
+        "y": 580,
         "wires": [
             [
                 "sd_3QkwjMIe9fv33fzZ"
@@ -1439,8 +1439,8 @@
         "inputs": 0,
         "outputs": 1,
         "category": "HTTP",
-        "x": 205,
-        "y": 780,
+        "x": 225,
+        "y": 660,
         "wires": [
             [
                 "sd_u197CuK67Qm6zbY6"
@@ -1497,8 +1497,8 @@
         "pipeline": "",
         "functionName": "sd_ceRj3DhfF1k5ZiId",
         "category": "Storage",
-        "x": 405,
-        "y": 780,
+        "x": 425,
+        "y": 660,
         "wires": [
             [
                 "sd_IsXyveyMwigsW4kK"
@@ -1573,8 +1573,8 @@
         },
         "functionName": "sd_IsXyveyMwigsW4kK",
         "category": "HTTP",
-        "x": 525,
-        "y": 780,
+        "x": 625,
+        "y": 660,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1590,8 +1590,8 @@
         "script": "bh.input.query = {owner: bh.input.body.email};",
         "functionName": "sd_u197CuK67Qm6zbY6",
         "category": "Function",
-        "x": 305,
-        "y": 780,
+        "x": 325,
+        "y": 660,
         "wires": [
             [
                 "sd_ceRj3DhfF1k5ZiId"
@@ -1640,8 +1640,8 @@
         "inputs": 0,
         "outputs": 1,
         "category": "HTTP",
-        "x": 205,
-        "y": 1080,
+        "x": 225,
+        "y": 1020,
         "wires": [
             [
                 "sd_BgJfeMQEJLBjhLP3"
@@ -1697,8 +1697,8 @@
         },
         "functionName": "sd_NsAap1u98eBctIHb",
         "category": "HTTP",
-        "x": 1125,
-        "y": 1080,
+        "x": 1105,
+        "y": 1020,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1743,7 +1743,7 @@
         "functionName": "updateLRStatus",
         "category": "Storage",
         "x": 425,
-        "y": 1080,
+        "y": 1020,
         "wires": [
             [
                 "sd_vY4kCrYic72G7Mcl"
@@ -1798,11 +1798,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.input.filter = {\n    owner: bh.input.body.owner,\n    textArea: bh.input.body.textArea\n}\nbh.input.updateStatus = {\n    $set: {\n         status: bh.input.body.status\n     }\n}\n\n// console.log('hi', bh.input)\n",
+        "script": "bh.input.filter = {\n    owner: bh.input.body.owner,\n    textArea: bh.input.body.textArea\n}\nbh.input.updateStatus = {\n    $set: {\n         status: bh.input.body.status\n     }\n}\n\nconsole.log('hi', bh.input)\n",
         "functionName": "sd_BgJfeMQEJLBjhLP3",
         "category": "Function",
-        "x": 300,
-        "y": 1080,
+        "x": 320,
+        "y": 1020,
         "wires": [
             [
                 "sd_immIm90604CsxQBD"
@@ -1822,8 +1822,8 @@
         "script": "\nbh.input.filter = {\n    owner: bh.input.body.owner\n}\n\n",
         "functionName": "sd_MJXH3Gc7KhoXWU4s",
         "category": "Function",
-        "x": 685,
-        "y": 1020,
+        "x": 665,
+        "y": 960,
         "wires": [
             [
                 "sd_s0V1JpPwpZ48eREX"
@@ -1870,8 +1870,8 @@
         "pipeline": "",
         "functionName": "getLDbyOwner",
         "category": "Storage",
-        "x": 765,
-        "y": 1020,
+        "x": 745,
+        "y": 960,
         "wires": [
             [
                 "sd_hfW9a2hxOgJItRFb"
@@ -1929,8 +1929,8 @@
         "script": "console.log('input',bh.input)\nvar leaveReq = bh.input.body;\n\nvar numberOfDays = datediff(leaveReq.startDate,leaveReq.endDate);\nconsole.log(numberOfDays)\n\nvar leaveDays = bh.local.result[0]\nleaveDays[leaveReq.leaveType] = Number(leaveDays[leaveReq.leaveType]) - numberOfDays;\n\nconsole.log(leaveDays)\n\n//differenece btwn start and end date\nfunction datediff(date1, date2) {\n    date1 = Date.parse(date1)\n    date2 = Date.parse(date2)\n    // The number of milliseconds in one day\n    const ONE_DAY = 1000 * 60 * 60 * 24;\n\n    // Calculate the difference in milliseconds\n    const differenceMs = Math.abs(date1 - date2);\n\n    // Convert back to days and return\n    return Math.round(differenceMs / ONE_DAY) + 1;\n}\n\n//prepare mongodb obects\n\nbh.input.filter = {\n    owner: bh.input.body.owner\n}\nbh.input.updateDays = {\n    $set: {\n         [leaveReq.leaveType] : leaveDays[leaveReq.leaveType]\n     }\n}",
         "functionName": "sd_hfW9a2hxOgJItRFb",
         "category": "Function",
-        "x": 880,
-        "y": 1020,
+        "x": 860,
+        "y": 960,
         "wires": [
             [
                 "sd_rxTuovZkQw2xb0L8"
@@ -1978,8 +1978,8 @@
         "pipeline": "",
         "functionName": "updateLeaveTypeNumber",
         "category": "Storage",
-        "x": 965,
-        "y": 1020,
+        "x": 945,
+        "y": 960,
         "wires": [
             [
                 "sd_NsAap1u98eBctIHb"
@@ -2034,11 +2034,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input)",
+        "script": "",
         "functionName": "sd_qWihIfR9hMZaRAp5",
         "category": "Function",
-        "x": 280,
-        "y": 860,
+        "x": 325,
+        "y": 740,
         "wires": [
             [
                 "sd_fPCHC4CVGuEU1Ke6"
@@ -2087,8 +2087,8 @@
         "inputs": 0,
         "outputs": 1,
         "category": "HTTP",
-        "x": 200,
-        "y": 1240,
+        "x": 225,
+        "y": 1140,
         "wires": [
             [
                 "sd_ZkQdY1IZaeS0aVve"
@@ -2145,8 +2145,8 @@
         "pipeline": "",
         "functionName": "sd_ZkQdY1IZaeS0aVve",
         "category": "Storage",
-        "x": 345,
-        "y": 1240,
+        "x": 425,
+        "y": 1140,
         "wires": [
             [
                 "sd_R1TQ3lEVE0Jyuvph"
@@ -2221,8 +2221,8 @@
         },
         "functionName": "sd_R1TQ3lEVE0Jyuvph",
         "category": "HTTP",
-        "x": 465,
-        "y": 1240,
+        "x": 625,
+        "y": 1140,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -2267,8 +2267,8 @@
         "inputs": 0,
         "outputs": 1,
         "category": "HTTP",
-        "x": 205,
-        "y": 1380,
+        "x": 225,
+        "y": 1260,
         "wires": [
             [
                 "sd_tCd9ZICQaNTDi4VC"
@@ -2325,8 +2325,8 @@
         "pipeline": "",
         "functionName": "sd_9dhS1NzXsfNG2wKH",
         "category": "Storage",
-        "x": 405,
-        "y": 1380,
+        "x": 425,
+        "y": 1260,
         "wires": [
             [
                 "sd_XTBvnyOAFVEdxNfY"
@@ -2401,8 +2401,8 @@
         },
         "functionName": "sd_XTBvnyOAFVEdxNfY",
         "category": "HTTP",
-        "x": 525,
-        "y": 1380,
+        "x": 625,
+        "y": 1260,
         "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -2418,8 +2418,8 @@
         "script": "// Check if email matches the user OR if reporting manager is equals to user\n\nbh.input.query = { };",
         "functionName": "sd_tCd9ZICQaNTDi4VC",
         "category": "Function",
-        "x": 305,
-        "y": 1380,
+        "x": 325,
+        "y": 1260,
         "wires": [
             [
                 "sd_9dhS1NzXsfNG2wKH"
@@ -2442,9 +2442,9 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "Aprroved",
+                "v": "Approved",
                 "vt": "str",
-                "gv": "\"Aprroved\""
+                "gv": "\"Approved\""
             },
             {
                 "t": "else"
@@ -2455,8 +2455,8 @@
         "outputs": 2,
         "functionName": "sd_vY4kCrYic72G7Mcl",
         "category": "Function",
-        "x": 545,
-        "y": 1080,
+        "x": 525,
+        "y": 1020,
         "wires": [
             [
                 "sd_MJXH3Gc7KhoXWU4s"

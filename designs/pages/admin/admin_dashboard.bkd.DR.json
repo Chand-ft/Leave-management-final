@@ -2910,6 +2910,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "fullHeight",
                                 "staffBoxes"
                             ],
                             "_type": "dav",
@@ -4310,7 +4311,6 @@
                         {
                             "_key": "class",
                             "_value": [
-                                "fitContent",
                                 "staffBoxes"
                             ],
                             "_type": "dav",
